@@ -15,8 +15,138 @@
 }
 body {
     font-family: "PT Sans", sans-serif;
-    
     font-size: 18px;
     line-height: 21px;
+    background-color: #ffffff;
+    color: #000000;
+    
+  }
+  /* Шапка фон и цвет текста как в боди кнопка отдельно */
+  .page-header {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+  .navigation-link {
+    text-decoration: none;
+    text-align: center;
+    color: #000000;
+  }
+
+  .button {
+    font-size: 16px;
+    line-height: 20px;
+    color: #ffffff;
+    background-color: #756157;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  /*Приимущества */
+  .advantages-slogan {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    text-transform: uppercase;
+    text-align: center;
+    
+  }
+  .advantages-becouse {
+    font-size: 22px;
+    line-height: 26px;
+    color: #333333;
+    text-align: center;
+  }
+  .advantages-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .advantages-description{
+    color: #333333;
+    text-align: center;/* центрирование сразу? или когда уже будем делать флексы?*/
+  }
+  .advantages-item:first-child {
+    background-color: #82B3D3;
+    color: #ffffff; 
+  } 
+  .advantages-item:last-child {
+    background-color: #82B3D3;
+    color: #ffffff; 
+  }
+  .advantages-item:first-child > p {
+    color: #ffffff;
+}
+.advantages-item:last-child > p {
+    color: #ffffff;
+}
+/* Услуги*/
+  .services-slogan {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .services-becouse {
+    font-size: 22px;
+    line-height: 26px;
+    color: #333333;
+    text-align: center;
+  }
+  .services-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .services-description {
+    color: #333333;
+    text-align: center;}
+
+  /* Бронирование*/
+  
+  .booking-slogan {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    text-transform: uppercase;
+    text-align: center;
+
+  }
+  .booking-becouse {
+    font-size: 22px;
+    line-height: 26px;
+    color: #333333;
+    text-align: center;
+
+  }
+ /* рассылка*/
+  .newsletter {
+    background-image: url("../images/Subscribe.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    height: 415px;
+    width: 1200px;
+    color: #ffffff;
+      
+  }
+  .newsletter-title {
+    text-transform: uppercase;
+  }
+  .newsletter-button {
+    background-color: #82B3D3;
+    border: none;
+  }
+ 
+  .page-footer a {
+    color: #000000;
+    text-decoration: none;
+  }
+  .footer-contacts-phone{
+    font-size: 40px;
+    line-height: 40px;
     
   }
