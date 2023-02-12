@@ -41,7 +41,7 @@
        </header>
        <main class="inner-catalog">
         <header class="inner-header">
-            <h1 class="inner-header-title">Гостиницы седоны</h1><!--фон это стили-->
+            <h1 class="inner-header-title">Гостиницы Седоны</h1><!--фон это стили-->
             <ul class="breadcrumbs">
                 <li class="breadcrumbs-item">
                   <a class="breadcrumbs-link" href="index.html">Главная</a>
@@ -84,7 +84,7 @@
                   </fieldset>
 
                   <fieldset class="catalog-filter-group">
-                    <legend class="catalog-filter-title">Тип Жтлья:</legend>
+                    <legend class="catalog-filter-title">Тип Жилья:</legend>
                     
                         <ul class="catalog-filter-list">
                           <li class="catalog-filter-item">
@@ -112,43 +112,44 @@
                   </fieldset>
 
                   <fieldset class="catalog-filter-group">
-                    <legend class="catalog-filter-title">Стоимость:</legend>
+                    <legend class="catalog-filter-title">Стоимость,₽:</legend>
                     <input type="number" placeholder="0" name="min"><input type="number" placeholder="9000"  name="max">
                     <input type="range" name="price" min="0" max="9000" step="100"> <!--делается наверняка подругому, но чтоб понить что оно тут есть-->
                   </fieldset>
 
-                <button class="button" type="submit">Применить</button>
-                <button class="button" type="submit">Сбросить</button><!--такая же как сбросить или нет?-->
+                <button class="button catalog-filter-button" type="submit">Применить</button>
+                <button class="button catalog-filter-button-clean" type="submit">Сбросить</button><!--такая же как сбросить или нет?-->
             </form>
         </section>
 
-        <section>
+        <section class="select">
             <h2 class="visually-hidden">Сортировка гостиниц и результаты поиска</h2>
-            <p>Найдено гостиниц: <span>38</span></p>
+            <p class="select-results">Найдено гостиниц: <span class="select-results-number">38</span></p>
         <select class="select-control" aria-label="Сортировка">
             <option value="popular">Сначала популярное</option>
-            <option value="cheap">Сначала дешёвое</option>
+            <option value="cheap">Сначала дешевые</option>
             <option value="expensive">Сначала дорогое</option>
           </select>
-          <a href="#" class="button button-border">
+          
+          <a href="#" class="button button-view button-view-border">
             <span class="visually-hidden">Показать карточки</span>
           </a>
-          <a class="button" href="#">
+          <a class="button button-view" href="#">
             <span class="visually-hidden">Подробное описание сверху</span>
           </a>
-          <a class="button" href="#">
+          <a class="button button-view" href="#">
             <span class="visually-hidden">Подробное описание справа</span>
           </a>
           <ul class="product-list">
           <li class="product-card">
-            <a class="product-card-link" href="#"><!--звездность отеля информативная картинка?-->
+            <a class="product-card-link" href="#">
               <img class="product-card-image" src="images/hotel-1.jpg" alt="" width="300" height="212">
               <h3 class="product-card-title">Amara Resort & Spa</h3>
             </a>
             <span class="product-card-type">Гостиница</span>
-            <b class="product-card-price">От 4000 ₽</b>
+            <span class="product-card-price">От 4000 ₽</span>
             <a class="product-card-button button" href="#">Купить</a>
-            <a class="product-card-button button" href="#">В избранное</a>
+            <a class="product-card-button button button-favorites" href="#">В избранное</a>
             <img class="product-card-rating-image" alt="звездочка" src="images/star.svg" width="18" height="17">
             <img class="product-card-rating-image" alt="звездочка" src="images/star.svg" width="18" height="17">
             <img class="product-card-rating-image" alt="звездочка" src="images/star.svg" width="18" height="17">
@@ -161,9 +162,9 @@
               <h3 class="product-card-title">Villas at Poco Diablo</h3>
             </a>
             <span class="product-card-type">Гостиница</span>
-            <b class="product-card-price">От 5000 ₽</b>
+            <span class="product-card-price">От 5000 ₽</span>
             <a class="product-card-button button" href="#">Купить</a>
-            <a class="product-card-button button" href="#">В избранное</a>
+            <a class="product-card-button button button-favorites-green" href="#">В избранное</a>
             <img class="product-card-rating-image" alt="звездочка" src="images/star.svg" width="18" height="17">
             <img class="product-card-rating-image" alt="звездочка" src="images/star.svg" width="18" height="17">
             <img class="product-card-rating-image" alt="звездочка" src="images/star.svg" width="18" height="17">
@@ -176,9 +177,9 @@
               <h3 class="product-card-title">Desert Quail Inn</h3>
             </a>
             <span class="product-card-type">Гостиница</span>
-            <b class="product-card-price">От 2500 ₽</b>
+            <span class="product-card-price">От 2500 ₽</span>
             <a class="product-card-button button" href="#">Купить</a>
-            <a class="product-card-button button" href="#">В избранное</a>
+            <a class="product-card-button button button-favorites" href="#">В избранное</a>
             <img class="product-card-rating-image" alt="звездочка" src="images/star.svg" width="18" height="17">
             <img class="product-card-rating-image" alt="звездочка" src="images/star.svg" width="18" height="17">
             <img class="product-card-rating-image" alt="звездочка" src="images/star.svg" width="18" height="17">
@@ -190,9 +191,9 @@
               <h3 class="product-card-title">Amara Resort & Spa</h3>
             </a>
             <span class="product-card-type">Гостиница</span>
-            <b class="product-card-price">От 1500 ₽</b>
+            <span class="product-card-price">От 1500 ₽</span>
             <a class="product-card-button button" href="#">Купить</a>
-            <a class="product-card-button button" href="#">В избранное</a>
+            <a class="product-card-button button button-favorites" href="#">В избранное</a>
             <img class="product-card-rating-image" alt="звездочка" src="images/star.svg" width="18" height="17">
             <img class="product-card-rating-image" alt="звездочка" src="images/star.svg" width="18" height="17">
             <span class="product-card-rating">Рейтинг: 5,0</span>
