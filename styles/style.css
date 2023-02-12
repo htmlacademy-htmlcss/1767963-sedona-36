@@ -17,7 +17,7 @@ body {
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
     line-height: 21px;
-    background-color:pink;
+    background-color:#ffffff; /* некоторые элементы на белом пока что не видно, меняла на розовый */
     color: #000000;
     
   }
