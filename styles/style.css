@@ -27,6 +27,7 @@ body {
     font-weight: 700;
     line-height: 24px;
   }
+
   .navigation-list{
     list-style-type: none;
   }
@@ -54,8 +55,7 @@ body {
     font-weight: 700;
     line-height: 36px;
     text-transform: uppercase;
-    text-align: center;
-    
+    text-align: center; 
   }
   .advantages-becouse {
     font-size: 22px;
@@ -72,67 +72,63 @@ body {
   }
   .advantages-description{
     color: #333333;
-    text-align: center;/* центрирование сразу? или когда уже будем делать флексы?*/
+    text-align: center;
+    font-size: 18px;
+    line-height: 21px;/* центрирование сразу? или когда уже будем делать флексы?*/
   }
-  .advantages-item:first-child { /* вот тут меня запутали, на лайве было, что надо просто добавить класс и все, на случай если станет больше карточек ╮(￣ω￣;)╭*/
+  .advantages-item-blue { /* вот тут меня запутали, на лайве было, что надо просто добавить класс и все, на случай если станет больше карточек ╮(￣ω￣;)╭*/
     background-color: #82B3D3;
     color: #ffffff; 
   } 
-  .advantages-item:last-child {
-    background-color: #82B3D3;
-    color: #ffffff; 
+  .advantages-description-blue {
+    color: #ffffff;
   }
-  .advantages-item:first-child > p {
-    color: #ffffff;
-}
-.advantages-item:last-child > p {
-    color: #ffffff;
-}
+ 
 /* Услуги*/
 .services-list {
     list-style-type: none ;
 }
-  .services-slogan {
+.services-slogan {
     font-size: 30px;
     font-weight: 700;
     line-height: 36px;
     text-transform: uppercase;
     text-align: center;
-  }
-  .services-becouse {
+}
+.services-becouse {
     font-size: 22px;
     line-height: 26px;
     color: #333333;
     text-align: center;
-  }
-  .services-title {
+}
+.services-title {
     font-size: 24px;
     font-weight: 700;
     line-height: 28px;
     text-transform: uppercase;
     text-align: center;
-  }
-  .services-description {
+}
+.services-description {
     color: #333333;
-    text-align: center;}
+    text-align: center;
+}
 
   /* Бронирование*/
   
-  .booking-slogan {
+.booking-slogan {
     font-size: 30px;
     font-weight: 700;
     line-height: 36px;
     text-transform: uppercase;
     text-align: center;
-
-  }
-  .booking-becouse {
+}
+.booking-becouse {
     font-size: 22px;
     line-height: 26px;
     color: #333333;
     text-align: center;
+}
 
-  }
  /* рассылка*/
   .newsletter {
     background-image: url("../images/Subscribe.jpg");
@@ -150,6 +146,7 @@ body {
     background-color: #82B3D3;
     border: none;
   }
+  /* футер*/
   .footer-social-list {
     list-style-type: none ;
 }
@@ -215,7 +212,8 @@ body {
     line-height: 36px;
     text-transform: uppercase;
   }
-  .select-control { /* стили и шрифт применились, но шрифт выглдит странно, в инспекторе браузера вроде тоже видно что применилось ┐('～`;)┌*/
+  .select-control { 
+    font-family: "PT Sans", sans-serif; /*Получилось!*/
     border: none;
     font-size: 18px;
     line-height: 21px;
@@ -230,7 +228,9 @@ body {
   }
 /* карточки товаров*/
 
-  .product-list {list-style-type: none ;}
+  .product-list {
+    list-style-type: none ;
+  }
   .product-card {
     color: #333333;
     font-size: 18px;
@@ -257,7 +257,9 @@ body {
   }
 
 /* пагинация*/
-  .pagination {list-style-type: none ;}
+  .pagination {
+    list-style-type: none ;
+  }
   .pagination-link {
     color: #ffffff;
     text-decoration: none;
