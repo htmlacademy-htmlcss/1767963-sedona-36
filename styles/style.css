@@ -17,6 +17,18 @@
 html {
   height: 100%;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 body {
     display: flex;
@@ -32,15 +44,33 @@ body {
   .main-container {
     flex-grow: 1;
   }
-  /* Шапка фон и цвет текста как в боди кнопка отдельно */
+  
   .page-header {
     font-size: 20px;
     font-weight: 700;
     line-height: 24px;
   }
-
+/* навигация */
+  .navigation {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1200px;
+    margin: 0 auto;
+    flex-direction: row;
+  }
+  .navigation-logo{
+    display: block;
+    width: 138px;
+  }
   .navigation-list{
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 339px;
+  }
+  .navigation-user {
+    width: 268px;
+    margin-left: auto;
   }
   .navigation-link {
     text-decoration: none;
@@ -56,12 +86,37 @@ body {
     background-color: #756157;
     text-transform: uppercase;
     text-decoration: none;
+    
+  }
+  .page-container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  .hero-background{
+    display: block;
+    margin: 0 auto;
+  }
+  .hero-welcome{
+    display: block;
+    margin: 0 auto;
+    margin-top: -434px;
+    margin-bottom: 82px;
   }
   /*Приимущества */
+  
   .advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     list-style-type: none;
+    margin: 0;
+    padding: 0;
   }
-  .advantages-slogan {
+  .advantages-slogan { /*Аризона не влазит(( */
+    display: block;
+    width: 620px;
+    margin: 0 auto;
+    padding-top: 69px;
     font-size: 30px;
     font-weight: 700;
     line-height: 36px;
@@ -69,6 +124,11 @@ body {
     text-align: center; 
   }
   .advantages-becouse {
+    display: block;
+    width: 651px;
+    margin: 0 auto;
+    padding-top: 25px;
+    padding-bottom: 69px;
     font-size: 22px;
     line-height: 26px;
     color: #333333;
@@ -85,11 +145,23 @@ body {
     color: #333333;
     text-align: center;
     font-size: 18px;
-    line-height: 21px;/* центрирование сразу? или когда уже будем делать флексы?*/
+    line-height: 21px;
   }
-  .advantages-item-blue { /* вот тут меня запутали, на лайве было, что надо просто добавить класс и все, на случай если станет больше карточек ╮(￣ω￣;)╭*/
+  .advantages-item {
+    height: 385px;
+  }
+  .advantages-item-text {
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .advantages-item-blue { 
+    display: flex;
+    width: 1200px;
     background-color: #82B3D3;
     color: #ffffff; 
+    
   } 
   .advantages-description-blue {
     color: #ffffff;
@@ -97,9 +169,20 @@ body {
  
 /* Услуги*/
 .services-list {
-    list-style-type: none ;
+  display: flex;
+  list-style-type: none ;
+}
+.services-item{
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  margin: 0 auto;
 }
 .services-slogan {
+    display: block;
+    width: 505px;
+    margin: 0 auto;
+    padding-top: 64px;
     font-size: 30px;
     font-weight: 700;
     line-height: 36px;
@@ -107,25 +190,37 @@ body {
     text-align: center;
 }
 .services-becouse {
+  display: block;
+    width: 490px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 64px;
     font-size: 22px;
     line-height: 26px;
     color: #333333;
     text-align: center;
 }
 .services-title {
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 28px;
-    text-transform: uppercase;
-    text-align: center;
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+  text-align: center;
 }
 .services-description {
-    color: #333333;
-    text-align: center;
+  display: block;
+  width: 230px;
+  color: #333333;
+  text-align: center;
 }
 
   /* Бронирование*/
-  
+.booking {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}  
 .booking-slogan {
     font-size: 30px;
     font-weight: 700;
@@ -138,6 +233,9 @@ body {
     line-height: 26px;
     color: #333333;
     text-align: center;
+}
+.booking-link {
+  display: block;
 }
 
  /* рассылка*/
