@@ -17,7 +17,8 @@
 html {
   height: 100%;
 }
-.visually-hidden {
+
+/*.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -28,7 +29,7 @@ html {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
+}*/
 
 body {
     display: flex;
@@ -236,6 +237,8 @@ body {
 }
 .booking-link {
   display: block;
+  width: 376px;
+  margin: 0 auto;
 }
 
  /* рассылка*/
@@ -256,17 +259,54 @@ body {
     border: none;
   }
   /* футер*/
+  .page-footer-container {
+    display: flex;
+    
+    width: 1200px;
+    margin: 0 auto;
+  }
+  .page-footer {
+    width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+  .footer-link {
+    display: block;
+  }
+  .footer-social {
+    display: flex;
+    flex-direction: column;
+    width: 142px;
+    margin-left: 70px;
+    
+   
+  }
+
   .footer-social-list {
     list-style-type: none ;
+    
 }
- 
+
   .page-footer a {
     color: #000000;
     text-decoration: none;
   }
+  
   .footer-contacts-phone{
     font-size: 40px;
-    line-height: 40px;
+    line-height: 40px; 
+    display: block;
+    width: 331px;
+    
+    
+    
+  }
+  .footer-contacts-web {
+    display: block;
+    width: 115px;
+    margin-right: 70px;
+    
     
   }
   /* к каталогу*/
