@@ -7,12 +7,13 @@
   </head>
   <body>
     <header class="page-header" >
-        <a class="navigation-logo navigation-link-current" href="index.html"><!--ведет на гравную-->
-          <img class="page-header-logo" alt="Логотип «City of Sedona»." src="images/logo.svg" width="140" height="70">
-        </a>
-        <nav class="navigation"><!--кнопка логотипа никуда не ведет, а в каталоге ведет-->
-          <ul class="navigation-list">
-            <li class="navigation-item">
+        
+        <nav class="navigation">
+          <a class="navigation-logo navigation-link-current" href="index.html"><!--ведет на гравную-->
+            <img class="page-header-logo" alt="Логотип «City of Sedona»." src="images/logo.svg" width="140" height="70">
+          </a><!--кнопка логотипа никуда не ведет, а в каталоге ведет-->
+          <ul class="navigation-list navigation-menu">
+            <li class="navigation-item ">
               <a class="navigation-link" href="index.html">Главная</a>
             </li>
             <li class="navigation-item">
@@ -39,7 +40,8 @@
         </nav>
     
        </header>
-       <main class="inner-catalog">
+       <main class="inner-catalog main-container">
+        <div class="page-container">
         <header class="inner-header">
             <h1 class="inner-header-title">Гостиницы Седоны</h1><!--фон это стили-->
             <ul class="breadcrumbs">
@@ -55,7 +57,7 @@
             <h2 class="visually-hidden">Каталог гостиниц с фильтрами</h2>
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
 
-                <fieldset class="catalog-filter-group">
+                <fieldset class="catalog-filter-group catalog-filter-group-infra">
                     <legend class="catalog-filter-title">Инфраструктура:</legend>
                     <ul class="catalog-filter-list">
                         <li class="catalog-filter-item">
@@ -83,7 +85,7 @@
                       </ul>
                   </fieldset>
 
-                  <fieldset class="catalog-filter-group">
+                  <fieldset class="catalog-filter-group catalog-filter-group-type">
                     <legend class="catalog-filter-title">Тип Жилья:</legend>
                     
                         <ul class="catalog-filter-list">
@@ -111,14 +113,14 @@
                         </ul> 
                   </fieldset>
 
-                  <fieldset class="catalog-filter-group">
+                  <div class="catalog-filter-group-price"><fieldset class="catalog-filter-group ">
                     <legend class="catalog-filter-title">Стоимость,₽:</legend>
                     <input type="number" placeholder="0" name="min"><input type="number" placeholder="9000"  name="max">
-                    <input type="range" name="price" min="0" max="9000" step="100"> <!--делается наверняка подругому, но чтоб понить что оно тут есть-->
+                    <input type="range" name="price" min="0" max="9000" step="100"> 
                   </fieldset>
 
                 <button class="button catalog-filter-button" type="submit">Применить</button>
-                <button class="button catalog-filter-button-clean" type="reset">Сбросить</button><!--такая же как сбросить или нет?-->
+                <button class="button catalog-filter-button catalog-filter-button-clean" type="reset">Сбросить</button></div>
             </form>
         </section>
 
@@ -223,7 +225,7 @@
           </ul>
         </section>
 
-        <section >
+        <section class="newsletter-inner">
             <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
           <p class="newsletter-legend">Только полезная информация и никакого спама, честное бойскаутское!</p>
           
@@ -238,36 +240,42 @@
           </div>
     
         </section>
+      </div>
        </main>
 
-       <footer class="page-footer">
-            <section class="footer-social">
+       <div class="page-footer-container">
+        <footer class="page-footer">
+          <section class="footer-social">
             <h2 class="visually-hidden">Социальные сети</h2>
             <ul class="footer-social-list">
-                <li class="footer-social-item">
-                <a class="footer-button" href="https://vk.com/htmlacademy">
-                    <span class="visually-hidden">ВКонтакте</span>
+              <li class="footer-social-item">
+                <a class="footer-button footer-link" href="https://vk.com/htmlacademy">
+                  <span class="visually-hidden">ВКонтакте</span>
                 </a>
-                </li>
-                <li class="footer-social-item">
-                <a class="footer-button" href="https://t.me/htmlacademy">
-                    <span class="visually-hidden">Телеграм</span>
+              </li>
+              <li class="footer-social-item">
+                <a class="footer-button footer-link" href="https://t.me/htmlacademy">
+                  <span class="visually-hidden">Телеграм</span>
                 </a>
-                </li>
-                <li class="footer-social-item">
-                <a class="footer-button" href="https://www.youtube.com/user/htmlacademyru">
-                    <span class="visually-hidden">Ютуб</span>
+              </li>
+              <li class="footer-social-item">
+                <a class="footer-button footer-link" href="https://www.youtube.com/user/htmlacademyru">
+                  <span class="visually-hidden">Ютуб</span>
                 </a>
-                </li>
+              </li>
             </ul>
-            </section>
-            <section class="footer-contacts-phone-web">
-            <h2 class="visually-hidden">Телефон и сайт</h2>
-            <a class="footer-contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-            <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a>
+          </section>
+          <section class="footer-contacts-phone">
+            <h2 class="visually-hidden">Телефон</h2>
+            <a class="footer-contacts-phone-link footer-link" href="tel:+78128121212">+7 (812) 812-12-12</a>
+          </section> 
+          <section class="footer-contacts-web"> 
+            <h2 class="visually-hidden">Сайт</h2> 
+          <a class="htmlacademy-link footer-link" href="https://htmlacademy.ru/">.html academy</a>
         </section>
     
-       </footer>
+        </footer>
+      </div>
 
   </body>
 </html>

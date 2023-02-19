@@ -18,7 +18,7 @@ html {
   height: 100%;
 }
 
-/*.visually-hidden {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -29,7 +29,7 @@ html {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}*/
+}
 
 body {
     display: flex;
@@ -62,16 +62,19 @@ body {
   .navigation-logo{
     display: block;
     width: 138px;
+    margin-left: 70px;
+
   }
-  .navigation-list{
+  .navigation-menu{
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin-left: 28px;
     width: 339px;
   }
   .navigation-user {
+    list-style-type: none;
     width: 268px;
     margin-left: auto;
+    margin-right: 110px;
   }
   .navigation-link {
     text-decoration: none;
@@ -248,6 +251,9 @@ body {
     background-repeat: no-repeat;
     height: 415px;
     width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: #ffffff;
       
   }
@@ -278,9 +284,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 142px;
-    margin-left: 70px;
-    
-   
+    margin-left: 70px; 
   }
 
   .footer-social-list {
@@ -297,17 +301,12 @@ body {
     font-size: 40px;
     line-height: 40px; 
     display: block;
-    width: 331px;
-    
-    
-    
+    width: 331px; 
   }
   .footer-contacts-web {
     display: block;
     width: 115px;
-    margin-right: 70px;
-    
-    
+    margin-right: 70px; 
   }
   /* к каталогу*/
   
@@ -335,7 +334,30 @@ body {
   /* фильтры*/
   .catalog-products {
     color: #ffffff;
+    display: flex;
   }
+  .catalog-filter {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content:space-between;
+    margin: 0 auto;
+    margin-top: -230px;
+    margin-bottom: 73px;
+  }
+  .catalog-filter-group {
+    padding: 0;
+    border: none;
+  }
+  .catalog-filter-group-infra{
+    margin-left: 70px;
+  }
+  .catalog-filter-group-price {
+    width: 549px;
+    margin-right: 70px;
+  }
+  
   .catalog-filter-title {
     font-size: 20px;
     font-weight: 700;
@@ -343,12 +365,18 @@ body {
     text-transform: uppercase;
     
   }
+
   .catalog-filter-list {
     list-style-type: none ;
+    padding: 0;
+    
   }
   .catalog-filter-button{
     background-color: #82B3D3;
     border: none;
+    display: block;
+    width: 191px;
+    height: 36px;
   }
   .catalog-filter-button-clean {
     background-color: transparent;
@@ -421,4 +449,11 @@ body {
   .pagination-current { /* тут надо было пробовать делать фестчаилдом?*/
     background-color: transparent;
     color: #000000; 
+  }
+  .newsletter-inner {
+    height: 415px;
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
