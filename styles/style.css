@@ -13,7 +13,28 @@
     src: url("../fonts/ptsans-700.woff2") format("woff2");
     font-display: swap;
 }
+
+html {
+  height: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
     line-height: 21px;
@@ -21,15 +42,39 @@ body {
     color: #000000;
     
   }
-  /* Шапка фон и цвет текста как в боди кнопка отдельно */
+  .main-container {
+    flex-grow: 1;
+  }
+  
   .page-header {
     font-size: 20px;
     font-weight: 700;
     line-height: 24px;
   }
+/* навигация */
+  .navigation {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1200px;
+    margin: 0 auto;
+    flex-direction: row;
+  }
+  .navigation-logo{
+    display: block;
+    width: 138px;
+    margin-left: 70px;
 
-  .navigation-list{
+  }
+  .navigation-menu{
     list-style-type: none;
+    margin-left: 28px;
+    width: 339px;
+  }
+  .navigation-user {
+    list-style-type: none;
+    width: 268px;
+    margin-left: auto;
+    margin-right: 110px;
   }
   .navigation-link {
     text-decoration: none;
@@ -45,12 +90,37 @@ body {
     background-color: #756157;
     text-transform: uppercase;
     text-decoration: none;
+    
+  }
+  .page-container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  .hero-background{
+    display: block;
+    margin: 0 auto;
+  }
+  .hero-welcome{
+    display: block;
+    margin: 0 auto;
+    margin-top: -434px;
+    margin-bottom: 82px;
   }
   /*Приимущества */
+  
   .advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     list-style-type: none;
+    margin: 0;
+    padding: 0;
   }
-  .advantages-slogan {
+  .advantages-slogan { /*Аризона не влазит(( */
+    display: block;
+    width: 620px;
+    margin: 0 auto;
+    padding-top: 69px;
     font-size: 30px;
     font-weight: 700;
     line-height: 36px;
@@ -58,6 +128,11 @@ body {
     text-align: center; 
   }
   .advantages-becouse {
+    display: block;
+    width: 651px;
+    margin: 0 auto;
+    padding-top: 25px;
+    padding-bottom: 69px;
     font-size: 22px;
     line-height: 26px;
     color: #333333;
@@ -74,11 +149,23 @@ body {
     color: #333333;
     text-align: center;
     font-size: 18px;
-    line-height: 21px;/* центрирование сразу? или когда уже будем делать флексы?*/
+    line-height: 21px;
   }
-  .advantages-item-blue { /* вот тут меня запутали, на лайве было, что надо просто добавить класс и все, на случай если станет больше карточек ╮(￣ω￣;)╭*/
+  .advantages-item {
+    height: 385px;
+  }
+  .advantages-item-text {
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .advantages-item-blue { 
+    display: flex;
+    width: 1200px;
     background-color: #82B3D3;
     color: #ffffff; 
+    
   } 
   .advantages-description-blue {
     color: #ffffff;
@@ -86,9 +173,20 @@ body {
  
 /* Услуги*/
 .services-list {
-    list-style-type: none ;
+  display: flex;
+  list-style-type: none ;
+}
+.services-item{
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  margin: 0 auto;
 }
 .services-slogan {
+    display: block;
+    width: 505px;
+    margin: 0 auto;
+    padding-top: 64px;
     font-size: 30px;
     font-weight: 700;
     line-height: 36px;
@@ -96,25 +194,37 @@ body {
     text-align: center;
 }
 .services-becouse {
+  display: block;
+    width: 490px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 64px;
     font-size: 22px;
     line-height: 26px;
     color: #333333;
     text-align: center;
 }
 .services-title {
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 28px;
-    text-transform: uppercase;
-    text-align: center;
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+  text-align: center;
 }
 .services-description {
-    color: #333333;
-    text-align: center;
+  display: block;
+  width: 230px;
+  color: #333333;
+  text-align: center;
 }
 
   /* Бронирование*/
-  
+.booking {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}  
 .booking-slogan {
     font-size: 30px;
     font-weight: 700;
@@ -128,6 +238,11 @@ body {
     color: #333333;
     text-align: center;
 }
+.booking-link {
+  display: block;
+  width: 376px;
+  margin: 0 auto;
+}
 
  /* рассылка*/
   .newsletter {
@@ -136,6 +251,9 @@ body {
     background-repeat: no-repeat;
     height: 415px;
     width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: #ffffff;
       
   }
@@ -147,18 +265,48 @@ body {
     border: none;
   }
   /* футер*/
+  .page-footer-container {
+    display: flex;
+    
+    width: 1200px;
+    margin: 0 auto;
+  }
+  .page-footer {
+    width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+  .footer-link {
+    display: block;
+  }
+  .footer-social {
+    display: flex;
+    flex-direction: column;
+    width: 142px;
+    margin-left: 70px; 
+  }
+
   .footer-social-list {
     list-style-type: none ;
+    
 }
- 
+
   .page-footer a {
     color: #000000;
     text-decoration: none;
   }
+  
   .footer-contacts-phone{
     font-size: 40px;
-    line-height: 40px;
-    
+    line-height: 40px; 
+    display: block;
+    width: 331px; 
+  }
+  .footer-contacts-web {
+    display: block;
+    width: 115px;
+    margin-right: 70px; 
   }
   /* к каталогу*/
   
@@ -186,7 +334,30 @@ body {
   /* фильтры*/
   .catalog-products {
     color: #ffffff;
+    display: flex;
   }
+  .catalog-filter {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content:space-between;
+    margin: 0 auto;
+    margin-top: -230px;
+    margin-bottom: 73px;
+  }
+  .catalog-filter-group {
+    padding: 0;
+    border: none;
+  }
+  .catalog-filter-group-infra{
+    margin-left: 70px;
+  }
+  .catalog-filter-group-price {
+    width: 549px;
+    margin-right: 70px;
+  }
+  
   .catalog-filter-title {
     font-size: 20px;
     font-weight: 700;
@@ -194,12 +365,18 @@ body {
     text-transform: uppercase;
     
   }
+
   .catalog-filter-list {
     list-style-type: none ;
+    padding: 0;
+    
   }
   .catalog-filter-button{
     background-color: #82B3D3;
     border: none;
+    display: block;
+    width: 191px;
+    height: 36px;
   }
   .catalog-filter-button-clean {
     background-color: transparent;
@@ -272,4 +449,11 @@ body {
   .pagination-current { /* тут надо было пробовать делать фестчаилдом?*/
     background-color: transparent;
     color: #000000; 
+  }
+  .newsletter-inner {
+    height: 415px;
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
