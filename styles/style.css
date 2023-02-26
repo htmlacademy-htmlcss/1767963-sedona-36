@@ -45,6 +45,18 @@ body {
   .main-container {
     flex-grow: 1;
   }
+
+  .button {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #756157;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    
+  }
   
   .page-header {
     font-size: 20px;
@@ -92,23 +104,22 @@ body {
     text-align: center;
     color: #000000;
     padding: 20px 16px;
-
   }
+.navigation-button {
+  color: #ffffff;
+  width: 92px;
+  height: 20px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 8px 34px;
+  border-radius: 4px;
+}
 
-  .button {
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 700;
-    color: #ffffff;
-    background-color: #756157;
-    text-transform: uppercase;
-    text-decoration: none;
-    
-  }
+ 
   .page-container {/* нужен ли тут паддинг как в демонстрации и какой? на макете я вижу тоько заползание логотипа это мб минусовой марджин, но я не уверена*/
-    
     width: 1200px;
     margin: 0 auto;
+    
   }
   .hero-background{
     display: block;
@@ -211,12 +222,14 @@ body {
 .services-list {
   display: flex;
   list-style-type: none ;
+  padding: 0;
 }
 .services-item{
   display: flex;
   width: 400px;
   flex-direction: column;
   margin: 0 auto;
+  align-items: center;
 }
 .services-slogan {
     display: block;
@@ -230,7 +243,7 @@ body {
     text-align: center;
 }
 .services-becouse {
-  display: block;
+    display: block;
     width: 490px;
     margin: 0 auto;
     padding-top: 20px;
@@ -240,8 +253,9 @@ body {
     color: #333333;
     text-align: center;
 }
-.services-title {
+.services-title { /* там еще иконка сверху, она вроде должна быть в следующем разделе*/
   display: block;
+  margin: 0 auto;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
@@ -253,6 +267,8 @@ body {
   width: 230px;
   color: #333333;
   text-align: center;
+  margin-top: 30px;
+  margin-bottom: 81px;
 }
 
   /* Бронирование*/
@@ -260,30 +276,44 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  align-items: center;
 }  
 .booking-slogan {
+    display: block;
     font-size: 30px;
     font-weight: 700;
     line-height: 36px;
     text-transform: uppercase;
     text-align: center;
+    margin-top: 96px;
 }
-.booking-becouse {
+.booking-becouse { /* текст не получился ровно((*/
+    display: block;
     font-size: 22px;
     line-height: 26px;
     color: #333333;
     text-align: center;
+    width: 592px;
+    margin-top: 20px;
 }
 .booking-link {
   display: block;
-  width: 376px;
+  font-size: 20px;
+  line-height: 36px;
+  width: 276px;
+  height: 36px;
   margin: 0 auto;
+  text-align: center;
+  margin-top: 54px;
+  padding: 8px 50px;
+  margin-bottom: 96px;
 }
 
  /* рассылка*/
   .newsletter {
-    background-image: url("../images/Subscribe.jpg");
+    background-image: url("../images/Subscribe.jpg"); /* тут расположение фона не получилось, не заполняет весь блок, какой будет верный бекграунд позишон или другое свойство?*/
     background-size: 100% auto;
+    background-position: 100%;;
     background-repeat: no-repeat;
     height: 415px;
     width: 1200px;
@@ -291,19 +321,58 @@ body {
     flex-direction: column;
     align-items: center;
     color: #ffffff;
+    margin: 0 auto;
       
   }
   .newsletter-title {
+    display: block;
     text-transform: uppercase;
+    margin-top: 96px;
+    width: 404px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .newsletter-legend {
+    display: block;
+    font-size: 22px;
+    line-height: 26px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    width: 475px;
+    text-align: center;
+  }
+  .newsletter-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 54px;
+    min-width: 684px;
+    margin-bottom: 104px;
+    
+  }
+  .newsletter-form .field {
+    display: block;
+    font-family: 'PT Sans';
+    font-size: 18px;
+    line-height: 24px;
+    width: 452px;
+    height: 52px;
+    padding: 0;
+    border: 0;
   }
   .newsletter-button {
+    display: block;
     background-color: #82B3D3;
     border: none;
+    font-size: 20px;
+    line-height: 36px;
+    min-width: 232px;
+    height: 52px;
+    text-align: center;
+    padding: 8px 50px;
   }
   /* футер*/
   .page-footer-container {
     display: flex;
-    
     width: 1200px;
     margin: 0 auto;
   }
@@ -312,20 +381,35 @@ body {
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
+    align-items: center;
   }
   .footer-link {
     display: block;
+    
   }
   .footer-social {
     display: flex;
-    flex-direction: column;
-    width: 142px;
+    width: 144px;
     margin-left: 70px; 
+    
   }
 
-  .footer-social-list {
+  .footer-social-list {background-color: pink;
+    display: flex;
+    flex-wrap: wrap;
     list-style-type: none ;
-    
+    flex-direction: row;
+    margin: 0;
+    padding: 0; 
+    margin-top: 45px;
+    margin-bottom: 35px; 
+}
+.footer-social-item {
+  width: 48px;
+  height: 40px;
+}
+.footer-social-item:nth-child(3n) {
+  margin-right: 0;
 }
 
   .page-footer a {
