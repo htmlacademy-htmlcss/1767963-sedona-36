@@ -536,22 +536,45 @@ body {
     background-color: transparent;
     border: none;
   }
-
+.sorting-container{
+  display: flex;
+  margin-top: 50px;
+}
   .select-results {
     font-size: 30px;
     font-weight: 700;
     line-height: 36px;
     text-transform: uppercase;
+    display: block;
+    margin: 0 auto;
+    margin-left: 70px;
   }
   .select-control { 
-    font-family: "PT Sans", sans-serif; /*Получилось!*/
+    font-family: "PT Sans", sans-serif;
     border: none;
     font-size: 18px;
     line-height: 21px;
     color: #333333;
+    display: block;
+    width: 292px;
+    margin-right: 40px;
+    justify-content: space-between;
+  }
+  .view-sorting {
+    display: flex;
+    margin-left: 40px;
+    margin-right: 70px;
+    flex-wrap: wrap;
+    width: 160px;
+    justify-content: space-between;
+
   }
   .button-view {
     background-color: transparent;
+    border: 2px solid pink;
+    min-width: 16px;
+    min-height: 14px;
+    padding: 14px 12px;
   }
   .button-view-border {
     border: 2px solid #000000;
@@ -561,6 +584,8 @@ body {
 
   .product-list {
     list-style-type: none ;
+    margin: 0;
+    padding: 0;
   }
   .product-card {
     color: #333333;
@@ -590,15 +615,29 @@ body {
 /* пагинация*/
   .pagination {
     list-style-type: none ;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 400px;
+    margin-top: 40px;
   }
   .pagination-link {
+    display: block;
     color: #ffffff;
     text-decoration: none;
     background-color: #82B3D3;
     font-size: 20px;
     font-weight: 700;
     line-height: 36px;
+    text-align: center;
+    min-width: 24px;
+    min-height: 36px;
+    padding: 12px 18px;
+    border-radius: 4px;
     
+  }
+  .pagination-item:not(:last-child) {
+    margin-right: 8px;
   }
   .pagination-current { /* тут надо было пробовать делать фестчаилдом?*/
     background-color: transparent;
