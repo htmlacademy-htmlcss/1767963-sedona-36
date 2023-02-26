@@ -193,6 +193,19 @@ body {
   .advantages-description-blue {
     color: #ffffff;
   }
+  .advantages-blue-text {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+  }
+  .advantages-blue-text .advantages-title {
+    margin: 0 auto;
+    margin-top: 102px; 
+  }
+  .advantages-blue-reverse {
+    flex-direction: row-reverse;
+  }
+
  
 /* Услуги*/
 .services-list {
