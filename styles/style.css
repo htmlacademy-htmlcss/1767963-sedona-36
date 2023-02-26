@@ -105,7 +105,8 @@ body {
     text-decoration: none;
     
   }
-  .page-container {
+  .page-container {/* нужен ли тут паддинг как в демонстрации и какой? на макете я вижу тоько заползание логотипа это мб минусовой марджин, но я не уверена*/
+    
     width: 1200px;
     margin: 0 auto;
   }
@@ -128,6 +129,7 @@ body {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    margin-top: 21px;
   }
   .advantages-slogan { /*Аризона не влазит(( */
     display: block;
@@ -152,17 +154,24 @@ body {
     text-align: center;
   }
   .advantages-title {
+    display: block;
+    margin: 0 auto;
     font-size: 24px;
     font-weight: 700;
     line-height: 28px;
     text-transform: uppercase;
     text-align: center;
+    width: 175px;
   }
   .advantages-description{
+    display: block;
+    margin: 0 auto;
+    margin-top: 62px;
     color: #333333;
     text-align: center;
     font-size: 18px;
     line-height: 21px;
+    width: 230px;
   }
   .advantages-item {
     height: 385px;
@@ -172,6 +181,7 @@ body {
     width: 400px;
     flex-direction: column;
     margin: 0 auto;
+    justify-content: center;
   }
   .advantages-item-blue { 
     display: flex;
