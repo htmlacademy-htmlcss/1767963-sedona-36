@@ -32,7 +32,7 @@
               <a class="navigation-link" href="#"><span class="visually-hidden">Избранное</span></a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link button" href="#">Хочу сюда!</a>
+              <a class="navigation-link button navigation-button" href="#">Хочу сюда!</a>
             </li>
     
           </ul>
@@ -46,7 +46,7 @@
             <h1 class="inner-header-title">Гостиницы Седоны</h1><!--фон это стили-->
             <ul class="breadcrumbs">
                 <li class="breadcrumbs-item">
-                  <a class="breadcrumbs-link" href="index.html">Главная</a>
+                  <a class="breadcrumbs-link home-link" href="index.html">Главная</a>
                 </li>
                 <li class="breadcrumbs-item">
                   <a class="breadcrumbs-link">Гостиницы</a>
@@ -125,23 +125,27 @@
         </section>
 
         <section class="select">
-            <h2 class="visually-hidden">Сортировка гостиниц и результаты поиска</h2>
-            <p class="select-results">Найдено гостиниц: <span class="select-results-number">38</span></p>
-        <select class="select-control" aria-label="Сортировка">
-            <option value="popular">Сначала популярное</option>
-            <option value="cheap">Сначала дешевые</option>
-            <option value="expensive">Сначала дорогое</option>
-          </select>
-          
-          <a href="#" class="button button-view button-view-border">
-            <span class="visually-hidden">Показать карточки</span>
-          </a>
-          <a class="button button-view" href="#">
-            <span class="visually-hidden">Подробное описание сверху</span>
-          </a>
-          <a class="button button-view" href="#">
-            <span class="visually-hidden">Подробное описание справа</span>
-          </a>
+            <h2 class="visually-hidden">Сортировка гостиниц</h2>
+              <div class="sorting-container">
+              <p class="select-results">Найдено гостиниц: <span class="select-results-number">38</span></p>
+            <select class="select-control" aria-label="Сортировка">
+              <option value="popular">Сначала популярное</option>
+              <option value="cheap">Сначала дешевые</option>
+              <option value="expensive">Сначала дорогое</option>
+            </select>
+            <div class="view-sorting">
+            <a href="#" class="button button-view button-view-border">
+              <span class="visually-hidden">Показать карточки</span>
+            </a>
+            <a class="button button-view" href="#">
+              <span class="visually-hidden">Подробное описание сверху</span>
+            </a>
+            <a class="button button-view" href="#">
+              <span class="visually-hidden">Подробное описание справа</span>
+            </a>
+          </div>
+           </div>
+        <h3 class="visually-hidden">Результаты поиска</h3>
           <ul class="product-list">
           <li class="product-card">
             <a class="product-card-link" href="#">
@@ -202,7 +206,8 @@
           </li>
         </ul>
         
-        <ul class="pagination">
+        <div class="pagination-container">
+          <ul class="pagination">
             <li class="pagination-item">
               <a class="pagination-link pagination-current">1</a>
             </li>
@@ -216,13 +221,14 @@
                 <a class="pagination-link" href="#">4</a>
               </li>
             <li class="pagination-item">
-              <span>...</span>
+              <a class="pagination-link pagination-current">...</a>
             </li>
             <li class="pagination-item">
               <a class="pagination-link" href="#">10</a>
             </li>
             
           </ul>
+        </div>
         </section>
 
         <section class="newsletter-inner">
@@ -230,13 +236,12 @@
           <p class="newsletter-legend">Только полезная информация и никакого спама, честное бойскаутское!</p>
           
           <div class="newsletter-form">
-            <form  action="https://echo.htmlacademy.ru/" method="post">
-              <label for="newsletter-email">Ваш e-mail</label>
+            <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
+              <label class="visually-hidden" for="newsletter-email">Ваш e-mail</label>
               <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
               <button class="button newsletter-button" type="submit">
                 Подписаться
               </button>
-              </form>
           </div>
     
         </section>
