@@ -315,13 +315,15 @@ body {
   margin-top: 54px;
   padding: 8px 50px;
   margin-bottom: 96px;
+  border-radius: 4px;
 }
 
  /* рассылка*/
   .newsletter {
-    background-image: url("../images/Subscribe.jpg"); /* тут расположение фона не получилось, не заполняет весь блок, какой будет верный бекграунд позишон или другое свойство?*/
+    background-image: url("../images/Subscribe.jpg");
+     /* тут расположение фона не получилось, не заполняет весь блок, какой будет верный бекграунд позишон или другое свойство?*/
     background-size: 100% auto;
-    background-position: 100%;;
+    background-position: top center;
     background-repeat: no-repeat;
     height: 415px;
     width: 1200px;
@@ -366,11 +368,13 @@ body {
     height: 52px;
     padding: 0;
     border: 0;
+    border-radius: 4px 0 0 4px;
   }
   .newsletter-button {
     display: block;
     background-color: #82B3D3;
     border: none;
+    border-radius: 0 4px 4px 0;
     font-size: 20px;
     line-height: 36px;
     min-width: 232px;
@@ -531,6 +535,7 @@ body {
     display: block;
     width: 191px;
     height: 36px;
+    border-radius: 4px;
   }
   .catalog-filter-button-clean {
     background-color: transparent;
@@ -592,7 +597,7 @@ body {
     grid-template-columns: 340px 340px 340px;
     gap: 20px;
   }
-  .product-card {
+  .product-card { /* у карточки очень очевидные столбики, поэтому я выбрала гриды, а не флексы*/
     color: #333333;
     font-size: 18px;
     line-height: 21px;
