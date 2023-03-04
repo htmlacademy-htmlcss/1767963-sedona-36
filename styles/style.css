@@ -585,6 +585,12 @@ body {
     list-style-type: none ;
     margin: 0;
     padding: 0;
+    margin-left: 70px;
+    margin-top: 40px;
+    margin-bottom: 40px;/*тут нужен марджин как в презентации?*/
+    display: grid;
+    grid-template-columns: 340px 340px 340px;
+    gap: 20px;
   }
   .product-card {
     color: #333333;
@@ -617,6 +623,7 @@ body {
     display: flex;
     margin: 0;
     padding: 0;
+    margin-left: 70px;
     width: 400px;
     margin-top: 40px;
   }
