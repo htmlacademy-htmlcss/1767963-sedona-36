@@ -596,6 +596,10 @@ body {
     color: #333333;
     font-size: 18px;
     line-height: 21px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 140px 140px;
+    gap: 16px 20px;
   }
   .product-card-link {
     color: #000000;
@@ -603,18 +607,57 @@ body {
     font-size: 24px;
     font-weight: 700;
     line-height: 28px;
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
   }
   .product-card-rating {
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
+    display: block;
+    align-self: center;
+    justify-self: center;
+
+  }
+  .product-card-title {
+    display: block;
+    align-self: start;
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+  .product-card-rating-image-grup {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-self: center;
+  }
+  .product-card-type {
+    display: block;
+    align-self: center;
+  }
+  .product-card-price {
+    display: block;
+    justify-self: end;
+    align-self: center;
+  }
+  .product-card-button {
+    display: block;
+    align-self: center;
+    justify-self: center;
+    padding: 8px 26px;
+    border-radius: 4px;
   }
   
   .button-favorites {
     background-color: #82B3D3;
+    padding: 8px 20px;
+    border-radius: 4px;
   }
   .button-favorites-green {
-    background-color: #7DB54F;;
+    background-color: #7DB54F;
+    padding: 8px 18px;
+    border-radius: 4px;
   }
 
 /* пагинация*/
