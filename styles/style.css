@@ -315,13 +315,15 @@ body {
   margin-top: 54px;
   padding: 8px 50px;
   margin-bottom: 96px;
+  border-radius: 4px;
 }
 
  /* рассылка*/
   .newsletter {
-    background-image: url("../images/Subscribe.jpg"); /* тут расположение фона не получилось, не заполняет весь блок, какой будет верный бекграунд позишон или другое свойство?*/
+    background-image: url("../images/Subscribe.jpg");
+     /* тут расположение фона не получилось, не заполняет весь блок, какой будет верный бекграунд позишон или другое свойство?*/
     background-size: 100% auto;
-    background-position: 100%;;
+    background-position: top center;
     background-repeat: no-repeat;
     height: 415px;
     width: 1200px;
@@ -366,11 +368,13 @@ body {
     height: 52px;
     padding: 0;
     border: 0;
+    border-radius: 4px 0 0 4px;
   }
   .newsletter-button {
     display: block;
     background-color: #82B3D3;
     border: none;
+    border-radius: 0 4px 4px 0;
     font-size: 20px;
     line-height: 36px;
     min-width: 232px;
@@ -531,6 +535,7 @@ body {
     display: block;
     width: 191px;
     height: 36px;
+    border-radius: 4px;
   }
   .catalog-filter-button-clean {
     background-color: transparent;
@@ -585,11 +590,21 @@ body {
     list-style-type: none ;
     margin: 0;
     padding: 0;
+    margin-left: 70px;
+    margin-top: 40px;
+    margin-bottom: 40px;/*тут нужен марджин как в презентации?*/
+    display: grid;
+    grid-template-columns: 340px 340px 340px;
+    gap: 20px;
   }
-  .product-card {
+  .product-card { /* у карточки очень очевидные столбики, поэтому я выбрала гриды, а не флексы*/
     color: #333333;
     font-size: 18px;
     line-height: 21px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 140px 140px;
+    gap: 16px 20px;
   }
   .product-card-link {
     color: #000000;
@@ -597,18 +612,57 @@ body {
     font-size: 24px;
     font-weight: 700;
     line-height: 28px;
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
   }
   .product-card-rating {
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
+    display: block;
+    align-self: center;
+    justify-self: center;
+
+  }
+  .product-card-title {
+    display: block;
+    align-self: start;
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+  .product-card-rating-image-grup {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-self: center;
+  }
+  .product-card-type {
+    display: block;
+    align-self: center;
+  }
+  .product-card-price {
+    display: block;
+    justify-self: end;
+    align-self: center;
+  }
+  .product-card-button {
+    display: block;
+    align-self: center;
+    justify-self: center;
+    padding: 8px 26px;
+    border-radius: 4px;
   }
   
   .button-favorites {
     background-color: #82B3D3;
+    padding: 8px 20px;
+    border-radius: 4px;
   }
   .button-favorites-green {
-    background-color: #7DB54F;;
+    background-color: #7DB54F;
+    padding: 8px 18px;
+    border-radius: 4px;
   }
 
 /* пагинация*/
@@ -617,6 +671,7 @@ body {
     display: flex;
     margin: 0;
     padding: 0;
+    margin-left: 70px;
     width: 400px;
     margin-top: 40px;
   }
