@@ -47,6 +47,7 @@ body {
   }
 
   .button {
+    display: inline-block;
     font-size: 16px;
     line-height: 20px;
     font-weight: 700;
@@ -55,7 +56,8 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     text-align: center;
-    
+    cursor:pointer;
+    border: none;
   }
   
   .page-header {
@@ -105,6 +107,7 @@ body {
     min-height: 20px;
   }
   .navigation-link {
+    position: relative;
     display: block;
     text-decoration: none;
     text-align: center;
@@ -121,8 +124,16 @@ body {
   border-radius: 4px;
   
 }
+.navigation-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #000000;
+}
 
- 
   .page-container {/* нужен ли тут паддинг как в демонстрации и какой? на макете я вижу тоько заползание логотипа это мб минусовой марджин, но я не уверена*/
     width: 1200px;
     margin: 0 auto;
@@ -239,6 +250,10 @@ body {
   margin: 0 auto;
   align-items: center;
 }
+.item-blue {
+  background-color: rgba(131, 179, 211, 0.12);
+  
+}
 .services-slogan {
     display: block;
     width: 505px;
@@ -269,6 +284,8 @@ body {
   line-height: 28px;
   text-transform: uppercase;
   text-align: center;
+  padding-top: 133px;
+  min-width: 75px;
 }
 .services-description {
   display: block;
@@ -277,6 +294,27 @@ body {
   text-align: center;
   margin-top: 30px;
   margin-bottom: 81px;
+}
+.services-list .services-item:nth-child(1) .services-title{
+  background-image: url("../images/housing-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 75px 75px;
+  background-position: center;
+}
+.services-list .services-item:nth-child(2) .services-title{
+  background-image: url("../images/food-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 75px 75px;
+  background-position: center;
+}
+.services-list .services-item:nth-child(3) .services-title{
+  background-image: url("../images/gifts-icons.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 75px 75px;
+  background-position: center;
 }
 
   /* Бронирование*/
@@ -369,6 +407,8 @@ body {
     padding: 0;
     border: 0;
     border-radius: 4px 0 0 4px;
+    background-color: #F2F2F2;
+    
   }
   .newsletter-button {
     display: block;
@@ -416,7 +456,8 @@ body {
     margin-top: 45px;
     margin-bottom: 35px; 
 }
-.footer-social-item {
+.footer-social-item a{
+  display: block;
   width: 48px;
   height: 40px;
 }
@@ -440,6 +481,34 @@ body {
     width: 115px;
     margin-right: 70px; 
   }
+  .footer-social-link {
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px 17px;
+    
+
+  }
+  
+  .footer-social-vk {
+    background-image: url("../images/social-vk.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    
+  }
+  
+  .footer-social-tg {
+    background-image: url("../images/social-tg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .footer-social-youtube {
+    background-image: url("../images/social-youtube.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  } 
   /* к каталогу*/
   .page-container {
     margin: 0 auto; /* как поднять основное содержание?*/
@@ -556,14 +625,17 @@ body {
   }
   .select-control { 
     font-family: "PT Sans", sans-serif;
-    border: none;
     font-size: 18px;
     line-height: 21px;
     color: #333333;
+    border: 2px solid #E5E5E5;
+    border-radius: 4px;
     display: block;
     width: 292px;
     margin-right: 40px;
     justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 44px;
   }
   .view-sorting {
     display: flex;
@@ -577,13 +649,12 @@ body {
   .button-view {
     background-color: transparent;
     min-width: 16px;
-    min-height: 14px;
-    padding: 14px 12px;
-  }
-  .button-view-border {
-    border: 2px solid #000000;
+    min-height: 16px;
+    padding: 16px 16px;
+    border: 2px solid #E5E5E5;
     border-radius: 4px;
   }
+  
 /* карточки товаров*/
 
   .product-list {
@@ -605,6 +676,8 @@ body {
     display: grid;
     grid-template-columns: 140px 140px;
     gap: 16px 20px;
+    border: 1px solid #E6E6E6;
+    border-radius: 4px;
   }
   .product-card-link {
     color: #000000;
@@ -636,6 +709,12 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
     align-self: center;
+  }
+  .product-card-rating {
+    background-color: #F2F2F2;
+    padding: 8px 20px;
+    border-radius: 4px;
+
   }
   .product-card-type {
     display: block;
@@ -692,10 +771,15 @@ body {
   }
   .pagination-item:not(:last-child) {
     margin-right: 8px;
+    
   }
-  .pagination-current { /**/
-    background-color: transparent;
+  .pagination-first  {
+    background-color: #F2F2F2;
     color: #000000; 
+  }
+  .pagination-current {
+    background-color: transparent;
+    color: #000000;
   }
   .newsletter-inner {
     height: 415px;
