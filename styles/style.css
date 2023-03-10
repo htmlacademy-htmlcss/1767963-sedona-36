@@ -60,6 +60,18 @@ body {
     border: none;
   }
   
+  .button:hover {
+    background-color: #615048;
+  }
+  
+  .button:focus {
+    background-color: #615048;
+  }
+  .button:active {
+    background-color: #756157;
+    color: rgba(255, 255, 255, 0.3);
+  }
+  
   .page-header {
     font-size: 20px;
     font-weight: 700;
@@ -80,10 +92,12 @@ body {
     width: 138px;
     margin-left: 70px;
     z-index: 1;
-
+    height: 64px;
   }
   .navigation-list {
     margin: 0 auto;
+    padding: 0;
+    list-style-type: none;/* почему не сбрасывается? */
   }
   .navigation-menu{
     display: flex;
@@ -92,9 +106,11 @@ body {
     margin-left: 28px;
     width: 339px;
     align-self: baseline;
+    z-index: 1;
   }
   .navigation-user {
     display: flex;
+    margin: 0 auto;
     flex-wrap: wrap;
     list-style-type: none;
     width: 268px;
@@ -134,12 +150,24 @@ body {
   fill: #000000;
 }
 
+
+.navigation-link-current::before {
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  left: 20px;
+  height: 2px;
+  background-color: #756157;
+  content: "";
+}
+
   .page-container {/* нужен ли тут паддинг как в демонстрации и какой? на макете я вижу тоько заползание логотипа это мб минусовой марджин, но я не уверена*/
     width: 1200px;
     margin: 0 auto;
     margin-top: -12px;
     
   }
+  /*Хиро блок*/
   .hero-background{
     display: block;
     margin: 0 auto;
@@ -422,6 +450,18 @@ body {
     text-align: center;
     padding: 8px 50px;
   }
+  .newsletter-button:hover {
+    background-color: #68A2CA;
+  }
+  
+  .newsletter-button:focus {
+    background-color: #68A2CA;
+  }
+  .newsletter-button:active {
+    background-color: #82B3D3;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
   /* футер*/
   .page-footer-container {
     display: flex;
@@ -476,39 +516,47 @@ body {
     display: block;
     width: 331px; 
   }
+  .footer-contacts-phone-link:hover {
+    color: #756157;
+  }
+  
+  .footer-contacts-phone-link:focus{
+    color: #756157;
+  }
+  .footer-contacts-phone-link:active{
+    color: rgba(117, 97, 87, 0.3);
+  }
+
   .footer-contacts-web {
     display: block;
     width: 115px;
     margin-right: 70px; 
   }
+  .htmlacademy-link:hover .htmlacademy-link-icon {
+    fill: #756157;
+  }
+  
+  .htmlacademy-link:focus .htmlacademy-link-icon {
+    fill: #756157;
+  }
+  .htmlacademy-link:active .htmlacademy-link-icon {
+    fill: rgba(117, 97, 87, 0.3);
+  }
+
   .footer-social-link {
     display: block;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 24px 17px;
-    
-
+  }
+  /* не получаются состояния у иконок*/
+  .footer-social-link:hover .footer-social-icon {
+    fill: #68A2CA;
   }
   
-  .footer-social-vk {
-    background-image: url("../images/social-vk.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    
-    
+  .footer-social-link:focus .footer-social-icon {
+    fill: #68A2CA;
   }
-  
-  .footer-social-tg {
-    background-image: url("../images/social-tg.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+  .footer-social-link:active .footer-social-icon {
+    fill: rgba(104, 162, 202, 0.3);
   }
-  
-  .footer-social-youtube {
-    background-image: url("../images/social-youtube.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-  } 
   /* к каталогу*/
   .page-container {
     margin: 0 auto; /* как поднять основное содержание?*/
@@ -553,10 +601,25 @@ body {
     color: inherit;
     text-decoration: none;
     display: block;
-    min-width: 21px;
+    min-width: 12px;
     min-height: 21px;
-    margin-right: 29px; /* подготовка места под стрелочку*/
+     /* подготовка места под стрелочку*/
 
+  }
+  .breadcrumbs-link:first-child {
+    display: block;
+    width: 12px;
+    margin-right: 11px;
+  }
+  .breadcrumbs-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 11px;
+  }
+  .breadcrumbs-icon-arrow {
+    width: 7px;
+    
   }
   /* фильтры*/
   .catalog-products {
@@ -606,10 +669,37 @@ body {
     height: 36px;
     border-radius: 4px;
   }
+
+  .catalog-filter-button:hover {
+    background-color: #68A2CA;
+  }
+  
+  .catalog-filter-button:focus {
+    background-color: #68A2CA;
+  }
+  .catalog-filter-button:active {
+    background-color: #82B3D3;
+    color: rgba(255, 255, 255, 0.3);
+  }
   .catalog-filter-button-clean {
     background-color: transparent;
     border: none;
   }
+  .catalog-filter-button-clean:hover {
+    color: #FFFFFF;
+    background-color: transparent;
+  }
+  
+  .catalog-filter-button-clean:focus {
+    color: ##FFFFFF;
+    border: 3px solid #83B3D3;
+    background-color: transparent;
+  }
+  .catalog-filter-button-clean:active {
+    color:rgba(255, 255, 255, 0.3)
+    background-color: transparent;
+  }
+
 .sorting-container{
   display: flex;
   margin-top: 50px;
@@ -653,6 +743,19 @@ body {
     padding: 16px 16px;
     border: 2px solid #E5E5E5;
     border-radius: 4px;
+  }
+  .button-view:hover {
+    border: 2px solid #000000;
+    background-color: transparent;/*почему эта обводка появляется у всех элкментов, при пролистывании табом? хотя свой ховер прописан для каждого*/
+  }
+  
+  .button-view:focus {
+    border: 2px solid #68A2CA;
+    background-color: transparent;
+  }
+  .button-view:active {
+    border: 2px solid #000000;
+    background-color: transparent;
   }
   
 /* карточки товаров*/
@@ -738,10 +841,31 @@ body {
     padding: 8px 20px;
     border-radius: 4px;
   }
-  .button-favorites-green {
+  .button-favorites:hover {
+    background-color: #68A2CA;
+  }
+  .button-favorites:focus {
+    background-color: #68A2CA;
+  }
+  .button-favorites:active {
+    background-color: #82B3D3;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .button-favorites-green { /* я думала, что зеленая кнопка,это активная у выбранной карточки(или добавленной в корзину?), но там тоже есть состояния*/
     background-color: #7DB54F;
     padding: 8px 18px;
     border-radius: 4px;
+  }
+  .button-favorites-green:hover {
+    background-color: #6C9E42;
+  }
+  .button-favorites-green:focus {
+    background-color: #6C9E42;
+  }
+  .button-favorites-green:active {
+    background-color: #7DB54F;
+    color: rgba(255, 255, 255, 0.3);
   }
 
 /* пагинация*/
@@ -777,10 +901,39 @@ body {
     background-color: #F2F2F2;
     color: #000000; 
   }
+ 
   .pagination-current {
     background-color: transparent;
     color: #000000;
   }
+  .pagination-link:hover{
+    background-color:#68A2CA;
+  }
+  
+  .pagination-link:focus{ 
+    background-color: #68A2CA;
+  }
+  .pagination-link:active{ 
+    background-color: #82B3D3;
+    color: rgba(255, 255, 255, 0.3);
+  }
+  .pagination-first:hover {
+    background-color: #F2F2F2;
+    color: #000000;
+  }
+  .pagination-first:active {
+    background-color: #F2F2F2;
+    color: #000000;
+  }
+  .pagination-first:focus {
+    background-color: #F2F2F2;
+    color: #000000;
+  }
+  .pagination-first:active {
+    background-color: #F2F2F2;
+    color: #000000;
+  }
+  /*рассылка*/
   .newsletter-inner {
     height: 415px;
     width: 1200px;
