@@ -1,0 +1,943 @@
+/* PT sans */
+@font-face {
+    font-family: "PT sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/ptsans-400.woff2") format("woff2");
+    font-display: swap;
+}
+@font-face {
+    font-family: "PT sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/ptsans-700.woff2") format("woff2");
+    font-display: swap;
+}
+
+html {
+  height: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    font-family: "PT Sans", sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    background-color:#ffffff; 
+    color: #000000;
+    
+  }
+  .main-container {
+    flex-grow: 1;
+  }
+
+  .button {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #756157;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    cursor:pointer;
+    border: none;
+  }
+  
+  .button:hover {
+    background-color: #615048;
+  }
+  
+  .button:focus {
+    background-color: #615048;
+  }
+  .button:active {
+    background-color: #756157;
+    color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .page-header {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+/* навигация */
+  .navigation {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1200px;
+    margin: 0 auto;
+    flex-direction: row;
+    align-items: center;
+    
+  }
+  .navigation-logo{
+    display: block;
+    width: 138px;
+    margin-left: 70px;
+    z-index: 1;
+    height: 64px;
+  }
+  .navigation-list {
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;/* почему не сбрасывается? */
+  }
+  .navigation-menu{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin-left: 28px;
+    width: 339px;
+    align-self: baseline;
+    z-index: 1;
+  }
+  .navigation-user {
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    list-style-type: none;
+    width: 268px;
+    margin-left: auto;
+    margin-right: 70px; 
+  }
+
+  .navigation-user .navigation-link {
+    min-width: 20px;
+    min-height: 20px;
+  }
+  .navigation-link {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: #000000;
+    padding: 20px 16px;
+  }
+.navigation-button {
+  color: #ffffff;
+  width: 92px;
+  height: 20px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 8px 34px;
+  border-radius: 4px;
+  
+}
+.navigation-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #000000;
+}
+
+
+.navigation-link-current::before {
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  left: 20px;
+  height: 2px;
+  background-color: #756157;
+  content: "";
+}
+
+  .page-container {/* нужен ли тут паддинг как в демонстрации и какой? на макете я вижу тоько заползание логотипа это мб минусовой марджин, но я не уверена*/
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: -12px;
+    
+  }
+  /*Хиро блок*/
+  .hero-background{
+    display: block;
+    margin: 0 auto;
+  }
+  .hero-welcome{
+    display: block;
+    margin: 0 auto;
+    margin-top: -434px;
+    margin-bottom: 82px;
+  }
+  /*Приимущества */
+  
+  .advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 21px;
+  }
+  .advantages-slogan { /*Аризона не влазит(( */
+    display: block;
+    width: 620px;
+    margin: 0 auto;
+    padding-top: 69px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    text-transform: uppercase;
+    text-align: center; 
+  }
+  .advantages-becouse {
+    display: block;
+    width: 651px;
+    margin: 0 auto;
+    padding-top: 25px;
+    padding-bottom: 69px;
+    font-size: 22px;
+    line-height: 26px;
+    color: #333333;
+    text-align: center;
+  }
+  .advantages-title {
+    display: block;
+    margin: 0 auto;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 175px;
+  }
+  .advantages-description{
+    display: block;
+    margin: 0 auto;
+    margin-top: 62px;
+    color: #333333;
+    text-align: center;
+    font-size: 18px;
+    line-height: 21px;
+    width: 230px;
+  }
+  .advantages-item {
+    height: 385px;
+  }
+  .advantages-item-text {
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  .advantages-item-blue { 
+    display: flex;
+    width: 1200px;
+    background-color: #82B3D3;
+    color: #ffffff; 
+    
+  } 
+  .advantages-description-blue {
+    color: #ffffff;
+  }
+  .advantages-blue-text {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+  }
+  .advantages-blue-text .advantages-title {
+    margin: 0 auto;
+    margin-top: 102px; 
+  }
+  .advantages-blue-reverse {
+    flex-direction: row-reverse;
+  }
+
+ 
+/* Услуги*/
+.services-list {
+  display: flex;
+  list-style-type: none ;
+  padding: 0;
+}
+.services-item{
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+}
+.item-blue {
+  background-color: rgba(131, 179, 211, 0.12);
+  
+}
+.services-slogan {
+    display: block;
+    width: 505px;
+    margin: 0 auto;
+    padding-top: 64px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.services-becouse {
+    display: block;
+    width: 490px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 64px;
+    font-size: 22px;
+    line-height: 26px;
+    color: #333333;
+    text-align: center;
+}
+.services-title { /* там еще иконка сверху, она вроде должна быть в следующем разделе*/
+  display: block;
+  margin: 0 auto;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 133px;
+  min-width: 75px;
+}
+.services-description {
+  display: block;
+  width: 230px;
+  color: #333333;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 81px;
+}
+.services-list .services-item:nth-child(1) .services-title{
+  background-image: url("../images/housing-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 75px 75px;
+  background-position: center;
+}
+.services-list .services-item:nth-child(2) .services-title{
+  background-image: url("../images/food-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 75px 75px;
+  background-position: center;
+}
+.services-list .services-item:nth-child(3) .services-title{
+  background-image: url("../images/gifts-icons.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 75px 75px;
+  background-position: center;
+}
+
+  /* Бронирование*/
+.booking {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+}  
+.booking-slogan {
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 96px;
+}
+.booking-becouse { /* текст не получился ровно((*/
+    display: block;
+    font-size: 22px;
+    line-height: 26px;
+    color: #333333;
+    text-align: center;
+    width: 592px;
+    margin-top: 20px;
+}
+.booking-link {
+  display: block;
+  font-size: 20px;
+  line-height: 36px;
+  width: 276px;
+  height: 36px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 54px;
+  padding: 8px 50px;
+  margin-bottom: 96px;
+  border-radius: 4px;
+}
+
+ /* рассылка*/
+  .newsletter {
+    background-image: url("../images/Subscribe.jpg");
+     /* тут расположение фона не получилось, не заполняет весь блок, какой будет верный бекграунд позишон или другое свойство?*/
+    background-size: 100% auto;
+    background-position: top center;
+    background-repeat: no-repeat;
+    height: 415px;
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    margin: 0 auto;
+      
+  }
+  .newsletter-title {
+    display: block;
+    text-transform: uppercase;
+    margin-top: 96px;
+    width: 404px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .newsletter-legend {
+    display: block;
+    font-size: 22px;
+    line-height: 26px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    width: 475px;
+    text-align: center;
+  }
+  .newsletter-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 54px;
+    min-width: 684px;
+    margin-bottom: 104px;
+    
+  }
+  .newsletter-form .field {
+    display: block;
+    font-family: 'PT Sans';
+    font-size: 18px;
+    line-height: 24px;
+    width: 452px;
+    height: 52px;
+    padding: 0;
+    border: 0;
+    border-radius: 4px 0 0 4px;
+    background-color: #F2F2F2;
+    
+  }
+  .newsletter-button {
+    display: block;
+    background-color: #82B3D3;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    font-size: 20px;
+    line-height: 36px;
+    min-width: 232px;
+    height: 52px;
+    text-align: center;
+    padding: 8px 50px;
+  }
+  .newsletter-button:hover {
+    background-color: #68A2CA;
+  }
+  
+  .newsletter-button:focus {
+    background-color: #68A2CA;
+  }
+  .newsletter-button:active {
+    background-color: #82B3D3;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  /* футер*/
+  .page-footer-container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+  }
+  .page-footer {
+    width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-link {
+    display: block;
+    
+  }
+  .footer-social {
+    display: flex;
+    width: 144px;
+    margin-left: 70px; 
+    
+  }
+
+  .footer-social-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none ;
+    flex-direction: row;
+    margin: 0;
+    padding: 0; 
+    margin-top: 45px;
+    margin-bottom: 35px; 
+}
+.footer-social-item a{
+  display: block;
+  width: 48px;
+  height: 40px;
+}
+.footer-social-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+  .page-footer a {
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  .footer-contacts-phone{
+    font-size: 40px;
+    line-height: 40px; 
+    display: block;
+    width: 331px; 
+  }
+  .footer-contacts-phone-link:hover {
+    color: #756157;
+  }
+  
+  .footer-contacts-phone-link:focus{
+    color: #756157;
+  }
+  .footer-contacts-phone-link:active{
+    color: rgba(117, 97, 87, 0.3);
+  }
+
+  .footer-contacts-web {
+    display: block;
+    width: 115px;
+    margin-right: 70px; 
+  }
+  .htmlacademy-link:hover .htmlacademy-link-icon {
+    fill: #756157;
+  }
+  
+  .htmlacademy-link:focus .htmlacademy-link-icon {
+    fill: #756157;
+  }
+  .htmlacademy-link:active .htmlacademy-link-icon {
+    fill: rgba(117, 97, 87, 0.3);
+  }
+
+  .footer-social-link {
+    display: block;
+  }
+  /* не получаются состояния у иконок*/
+  .footer-social-link:hover .footer-social-icon {
+    fill: #68A2CA;
+  }
+  
+  .footer-social-link:focus .footer-social-icon {
+    fill: #68A2CA;
+  }
+  .footer-social-link:active .footer-social-icon {
+    fill: rgba(104, 162, 202, 0.3);
+  }
+  /* к каталогу*/
+  .page-container {
+    margin: 0 auto; /* как поднять основное содержание?*/
+  }
+  .main-container {
+    margin: 0 auto;
+  }
+  .inner-header { 
+    background-image: url("../images/filter.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    height: 412px;
+    width: 1200px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+    
+  }
+  .inner-header-title {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 78px; 
+    display: block;
+    margin: 0 auto;
+    margin-top: 35px;
+    margin-left: 70px;
+  }
+  
+  .breadcrumbs {
+    list-style-type: none ; 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    margin-left: 70px;
+    margin-top: 8px;
+  }
+  .breadcrumbs-link {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    min-width: 12px;
+    min-height: 21px;
+     /* подготовка места под стрелочку*/
+
+  }
+  .breadcrumbs-link:first-child {
+    display: block;
+    width: 12px;
+    margin-right: 11px;
+  }
+  .breadcrumbs-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 11px;
+  }
+  .breadcrumbs-icon-arrow {
+    width: 7px;
+    
+  }
+  /* фильтры*/
+  .catalog-products {
+    color: #ffffff;
+    display: flex;
+  }
+  .catalog-filter {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content:space-between;
+    margin: 0 auto;
+    margin-top: -230px;
+    margin-bottom: 73px;
+  }
+  .catalog-filter-group {
+    padding: 0;
+    border: none;
+  }
+  .catalog-filter-group-infra{
+    margin-left: 70px;
+  }
+  .catalog-filter-group-price {
+    width: 549px;
+    margin-right: 70px;
+  }
+  
+  .catalog-filter-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    
+  }
+
+  .catalog-filter-list {
+    list-style-type: none ;
+    padding: 0;
+    
+  }
+  .catalog-filter-button{
+    background-color: #82B3D3;
+    border: none;
+    display: block;
+    width: 191px;
+    height: 36px;
+    border-radius: 4px;
+  }
+
+  .catalog-filter-button:hover {
+    background-color: #68A2CA;
+  }
+  
+  .catalog-filter-button:focus {
+    background-color: #68A2CA;
+  }
+  .catalog-filter-button:active {
+    background-color: #82B3D3;
+    color: rgba(255, 255, 255, 0.3);
+  }
+  .catalog-filter-button-clean {
+    background-color: transparent;
+    border: none;
+  }
+  .catalog-filter-button-clean:hover {
+    color: #FFFFFF;
+    background-color: transparent;
+  }
+  
+  .catalog-filter-button-clean:focus {
+    color: ##FFFFFF;
+    border: 3px solid #83B3D3;
+    background-color: transparent;
+  }
+  .catalog-filter-button-clean:active {
+    color:rgba(255, 255, 255, 0.3)
+    background-color: transparent;
+  }
+
+.sorting-container{
+  display: flex;
+  margin-top: 50px;
+}
+  .select-results {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    text-transform: uppercase;
+    display: block;
+    margin: 0 auto;
+    margin-left: 70px;
+  }
+  .select-control { 
+    font-family: "PT Sans", sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    color: #333333;
+    border: 2px solid #E5E5E5;
+    border-radius: 4px;
+    display: block;
+    width: 292px;
+    margin-right: 40px;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 44px;
+  }
+  .view-sorting {
+    display: flex;
+    margin-left: 40px;
+    margin-right: 70px;
+    flex-wrap: wrap;
+    width: 160px;
+    justify-content: space-between;
+
+  }
+  .button-view {
+    background-color: transparent;
+    min-width: 16px;
+    min-height: 16px;
+    padding: 16px 16px;
+    border: 2px solid #E5E5E5;
+    border-radius: 4px;
+  }
+  .button-view:hover {
+    border: 2px solid #000000;
+    background-color: transparent;/*почему эта обводка появляется у всех элкментов, при пролистывании табом? хотя свой ховер прописан для каждого*/
+  }
+  
+  .button-view:focus {
+    border: 2px solid #68A2CA;
+    background-color: transparent;
+  }
+  .button-view:active {
+    border: 2px solid #000000;
+    background-color: transparent;
+  }
+  
+/* карточки товаров*/
+
+  .product-list {
+    list-style-type: none ;
+    margin: 0;
+    padding: 0;
+    margin-left: 70px;
+    margin-top: 40px;
+    margin-bottom: 40px;/*тут нужен марджин как в презентации?*/
+    display: grid;
+    grid-template-columns: 340px 340px 340px;
+    gap: 20px;
+  }
+  .product-card { /* у карточки очень очевидные столбики, поэтому я выбрала гриды, а не флексы*/
+    color: #333333;
+    font-size: 18px;
+    line-height: 21px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 140px 140px;
+    gap: 16px 20px;
+    border: 1px solid #E6E6E6;
+    border-radius: 4px;
+  }
+  .product-card-link {
+    color: #000000;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+  }
+  .product-card-rating {
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    display: block;
+    align-self: center;
+    justify-self: center;
+
+  }
+  .product-card-title {
+    display: block;
+    align-self: start;
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+  .product-card-rating-image-grup {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-self: center;
+  }
+  .product-card-rating {
+    background-color: #F2F2F2;
+    padding: 8px 20px;
+    border-radius: 4px;
+
+  }
+  .product-card-type {
+    display: block;
+    align-self: center;
+  }
+  .product-card-price {
+    display: block;
+    justify-self: end;
+    align-self: center;
+  }
+  .product-card-button {
+    display: block;
+    align-self: center;
+    justify-self: center;
+    padding: 8px 26px;
+    border-radius: 4px;
+  }
+  
+  .button-favorites {
+    background-color: #82B3D3;
+    padding: 8px 20px;
+    border-radius: 4px;
+  }
+  .button-favorites:hover {
+    background-color: #68A2CA;
+  }
+  .button-favorites:focus {
+    background-color: #68A2CA;
+  }
+  .button-favorites:active {
+    background-color: #82B3D3;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .button-favorites-green { /* я думала, что зеленая кнопка,это активная у выбранной карточки(или добавленной в корзину?), но там тоже есть состояния*/
+    background-color: #7DB54F;
+    padding: 8px 18px;
+    border-radius: 4px;
+  }
+  .button-favorites-green:hover {
+    background-color: #6C9E42;
+  }
+  .button-favorites-green:focus {
+    background-color: #6C9E42;
+  }
+  .button-favorites-green:active {
+    background-color: #7DB54F;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+/* пагинация*/
+  .pagination {
+    list-style-type: none ;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-left: 70px;
+    width: 400px;
+    margin-top: 40px;
+  }
+  .pagination-link {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #82B3D3;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: center;
+    min-width: 24px;
+    min-height: 36px;
+    padding: 12px 18px;
+    border-radius: 4px;
+    
+  }
+  .pagination-item:not(:last-child) {
+    margin-right: 8px;
+    
+  }
+  .pagination-first  {
+    background-color: #F2F2F2;
+    color: #000000; 
+  }
+ 
+  .pagination-current {
+    background-color: transparent;
+    color: #000000;
+  }
+  .pagination-link:hover{
+    background-color:#68A2CA;
+  }
+  
+  .pagination-link:focus{ 
+    background-color: #68A2CA;
+  }
+  .pagination-link:active{ 
+    background-color: #82B3D3;
+    color: rgba(255, 255, 255, 0.3);
+  }
+  .pagination-first:hover {
+    background-color: #F2F2F2;
+    color: #000000;
+  }
+  .pagination-first:active {
+    background-color: #F2F2F2;
+    color: #000000;
+  }
+  .pagination-first:focus {
+    background-color: #F2F2F2;
+    color: #000000;
+  }
+  .pagination-first:active {
+    background-color: #F2F2F2;
+    color: #000000;
+  }
+  /*рассылка*/
+  .newsletter-inner {
+    height: 415px;
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } /*принормальном масштабе 100% почемуто марджин между формой и футером странно работает, хотя прописан 104px*/
