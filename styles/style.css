@@ -532,6 +532,10 @@ body {
     width: 115px;
     margin-right: 70px; 
   }
+
+  .htmlacademy-link .htmlacademy-link-icon {
+    fill: #000000;
+  }
   .htmlacademy-link:hover .htmlacademy-link-icon {
     fill: #756157;
   }
@@ -547,6 +551,10 @@ body {
     display: block;
   }
   /* не получаются состояния у иконок*/
+  .footer-social-link .footer-social-icon {
+    fill: #83B3D3
+  }
+
   .footer-social-link:hover .footer-social-icon {
     fill: #68A2CA;
   }
@@ -691,12 +699,12 @@ body {
   }
   
   .catalog-filter-button-clean:focus {
-    color: ##FFFFFF;
+    color: #FFFFFF;
     border: 3px solid #83B3D3;
     background-color: transparent;
   }
   .catalog-filter-button-clean:active {
-    color:rgba(255, 255, 255, 0.3)
+    color:rgba(255, 255, 255, 0.3);
     background-color: transparent;
   }
 
