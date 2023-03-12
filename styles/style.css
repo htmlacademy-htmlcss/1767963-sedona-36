@@ -509,7 +509,6 @@ body {
  /* рассылка*/
   .newsletter {
     background-image: url("../images/Subscribe.jpg");
-     /* тут расположение фона не получилось, не заполняет весь блок, какой будет верный бекграунд позишон или другое свойство?*/
     background-size: 100% auto;
     background-position: top center;
     background-repeat: no-repeat;
@@ -565,8 +564,8 @@ body {
     display: block;
     font-family: 'PT Sans';
     font-weight: 700;
-font-size: 20px;
-line-height: 36px;
+    font-size: 20px;
+    line-height: 36px;
     background-color: #82B3D3;
     border: none;
     border-radius: 0 4px 4px 0;
@@ -629,13 +628,13 @@ line-height: 36px;
 }
 .footer-social-item a{
   display: block;
-  min-width: 24px;
+  width: 24px;
   height: 40px;
   padding-left: 10px;
-  padding-right;: 10px;
+  padding-right: 10px;
 }
 .footer-social-item:nth-child(3n) {
-  margin-right: 10px;
+  margin-right: 0;
 }
 
   .page-footer a {
@@ -683,7 +682,7 @@ line-height: 36px;
   .footer-social-link {
     display: block;
   }
-  /* не получаются состояния у иконок*/
+  
   .footer-social-link .footer-social-icon {
     fill: #83B3D3
   }
@@ -700,10 +699,12 @@ line-height: 36px;
   }
   /* к каталогу*/
   .page-container {
-    margin: 0 auto; /* как поднять основное содержание?*/
+    margin: 0 auto;
+    padding: 0; /* как поднять основное содержание?*/
   }
   .main-container {
     margin: 0 auto;
+    padding: 0;
   }
   .inner-header { 
     background-image: url("../images/filter.jpg");
@@ -843,7 +844,10 @@ line-height: 36px;
 
 .sorting-container{
   display: flex;
+  margin: 0 auto;
   margin-top: 50px;
+  justify-content: space-between;
+  
 }
   .select-results {
     font-size: 30px;
@@ -853,6 +857,7 @@ line-height: 36px;
     display: block;
     margin: 0 auto;
     margin-left: 70px;
+    margin-top: 5px;
   }
   .select-control { 
     font-family: "PT Sans", sans-serif;
@@ -863,10 +868,10 @@ line-height: 36px;
     border-radius: 4px;
     display: block;
     width: 292px;
-    margin-right: 40px;
-    justify-content: space-between;
+    height: 49px;
+    margin-right: 33px;
     padding-left: 20px;
-    padding-right: 44px;
+    
   }
   .view-sorting {
     display: flex;
@@ -874,14 +879,16 @@ line-height: 36px;
     margin-right: 70px;
     flex-wrap: wrap;
     width: 160px;
+    height: 49px;
     justify-content: space-between;
+    
 
   }
   .button-view {
     background-color: transparent;
-    min-width: 16px;
-    min-height: 16px;
-    padding: 16px 16px;
+    width: 16px;
+    height: 14px;
+    padding: 17px 16px;
     border: 2px solid #E5E5E5;
     border-radius: 4px;
   }
@@ -948,7 +955,9 @@ line-height: 36px;
     display: block;
     align-self: start;
     margin-top: 16px;
-    margin-bottom: 8px;
+    margin-bottom: -2px;
+    font-size: 24px;
+    line-height: 28px;
   }
   .product-card-rating-image-grup {
     display: block;
@@ -960,8 +969,8 @@ line-height: 36px;
     background-color: #F2F2F2;
     padding: 8px 20px;
     border-radius: 4px;
-
   }
+
   .product-card-type {
     display: block;
     align-self: center;
@@ -1019,7 +1028,7 @@ line-height: 36px;
     padding: 0;
     margin-left: 70px;
     width: 400px;
-    margin-top: 80px;
+    margin-top: 75px;
     position: relative;
   }
   
@@ -1092,4 +1101,7 @@ line-height: 36px;
     display: flex;
     flex-direction: column;
     align-items: center;
-  } /*принормальном масштабе 100% почемуто марджин между формой и футером странно работает, хотя прописан 104px*/
+    margin: 0 auto;
+    margin-top: 60px;
+  }
+   /*принормальном масштабе 100% почемуто марджин между формой и футером странно работает, хотя прописан 104px*/
