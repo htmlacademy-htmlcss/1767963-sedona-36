@@ -40,7 +40,8 @@ body {
     line-height: 21px;
     background-color:#ffffff; 
     color: #000000;
-    
+    margin: 0;
+    padding: 0;
   }
   .main-container {
     flex-grow: 1;
@@ -113,15 +114,13 @@ body {
     margin: 0 auto;
     flex-wrap: wrap;
     list-style-type: none;
-    width: 268px;
+    width: 270px;
     margin-left: auto;
     margin-right: 70px; 
+    align-items: center;
   }
 
-  .navigation-user .navigation-link {
-    min-width: 20px;
-    min-height: 20px;
-  }
+  
   .navigation-link {
     position: relative;
     display: block;
@@ -129,6 +128,15 @@ body {
     text-align: center;
     color: #000000;
     padding: 20px 16px;
+  }
+  .navigation-link-current::before {
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    left: 20px;
+    height: 2px;
+    background-color: #756157;
+    content: "";
   }
 .navigation-button {
   color: #ffffff;
@@ -138,7 +146,6 @@ body {
   text-align: center;
   padding: 8px 34px;
   border-radius: 4px;
-  
 }
 .navigation-icon {
   position: absolute;
@@ -148,18 +155,44 @@ body {
   left: 0;
   margin: auto;
   fill: #000000;
+  
 }
-
-
-.navigation-link-current::before {
+.navigation-user-item {
+  position: relative;
+  min-width: 10px;
+  padding-left: 11px;
+  padding-right: 11px;
+  
+}
+.navigation-user-item :nth-child(2) {
+  left: -11px;
+}
+.navigation-user .navigation-user-item:last-child {
+  margin-left: auto;
+  padding: 0;
+  
+}
+.navigation-icon-counter { /*почему сердечко не встает на место?*/
   position: absolute;
-  right: 20px;
-  bottom: 0;
-  left: 20px;
-  height: 2px;
-  background-color: #756157;
-  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  padding: 3px;
+  border-radius: 50%;
+  background-color: #7DB54F;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 10px;
+  text-align: center;
+  z-index: 1;
+  left: 14px;
+
 }
+
+
+
+
 
   .page-container {/* нужен ли тут паддинг как в демонстрации и какой? на макете я вижу тоько заползание логотипа это мб минусовой марджин, но я не уверена*/
     width: 1200px;
@@ -177,6 +210,70 @@ body {
     margin: 0 auto;
     margin-top: -434px;
     margin-bottom: 82px;
+  }
+  .hero-divider-left {
+    position: relative;
+    display: block;
+    width: 600px;
+    height: 57px;
+    margin-right: auto;
+    margin-top: -57px;
+    z-index: 1;
+    content: "";
+    background-color: transparent;
+  }
+  .hero-divider-left::before {
+    position: absolute;
+    content: ""; 
+    z-index: 1;
+    width: 0;
+    height: 0;
+    border-bottom: 57px solid #FFFFFF; 
+	  border-right: 600px solid transparent;
+    top: 1px;
+  }
+  .hero-divider-left::after {
+    position: absolute;
+    content: ""; 
+    z-index: 1;
+    width: 0;
+    height: 0;
+    border-bottom: 57px solid #FFFFFF; 
+	  border-right: 350px solid transparent;
+    top: 1px;
+    left: 250px;
+  }
+  .hero-divider-right {
+    position: relative;
+    display: block;
+    width: 600px;
+    height: 57px;
+    margin-left: auto;
+    margin-top: -57px;
+    z-index: 1;
+    content: "";
+    background-color: transparent;
+  }
+  .hero-divider-right::before {
+    position: absolute;
+    content: ""; 
+    z-index: 1;
+    width: 0;
+    height: 0;
+    border-bottom: 57px solid #FFFFFF; 
+	  border-left: 600px solid transparent;
+    top: 1px;
+  }
+  .hero-divider-right::after {
+    position: absolute;
+    content: ""; 
+    z-index: 1;
+    width: 0;
+    height: 0;
+    border-bottom: 57px solid #FFFFFF; 
+	  border-left: 350px solid transparent;
+    top: 1px;
+    right: 250px;
   }
   /*Приимущества */
   
@@ -212,6 +309,7 @@ body {
     text-align: center;
   }
   .advantages-title {
+    position: relative;
     display: block;
     margin: 0 auto;
     font-size: 24px;
@@ -221,6 +319,28 @@ body {
     text-align: center;
     width: 175px;
   }
+  .advantages-title-light::before {
+    position: absolute;
+    bottom: -31px;
+    left: 50%;
+    margin-left: -30px;
+    width: 60px;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.3);
+    content: ""; 
+  }
+  .advantages-title-blue::before {
+    position: absolute;
+    bottom: -31px;
+    left: 50%;
+    margin-left: -30px;
+    width: 60px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.3);
+    content: ""; 
+  }
+
+
   .advantages-description{
     display: block;
     margin: 0 auto;
@@ -246,6 +366,7 @@ body {
     width: 1200px;
     background-color: #82B3D3;
     color: #ffffff; 
+    letter-spacing: 0.3px;
     
   } 
   .advantages-description-blue {
@@ -255,6 +376,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 400px;
+    
   }
   .advantages-blue-text .advantages-title {
     margin: 0 auto;
@@ -266,10 +388,12 @@ body {
 
  
 /* Услуги*/
+
 .services-list {
   display: flex;
   list-style-type: none ;
   padding: 0;
+  margin-top: 18px;
 }
 .services-item{
   display: flex;
@@ -298,7 +422,7 @@ body {
     width: 490px;
     margin: 0 auto;
     padding-top: 20px;
-    padding-bottom: 64px;
+    padding-bottom: 48px;
     font-size: 22px;
     line-height: 26px;
     color: #333333;
@@ -312,37 +436,39 @@ body {
   line-height: 28px;
   text-transform: uppercase;
   text-align: center;
-  padding-top: 133px;
+  padding-top: 180px;
   min-width: 75px;
 }
 .services-description {
   display: block;
-  width: 230px;
+  width: 235px;
   color: #333333;
   text-align: center;
   margin-top: 30px;
   margin-bottom: 81px;
+  letter-spacing: 0.3px;
 }
 .services-list .services-item:nth-child(1) .services-title{
   background-image: url("../images/housing-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 75px 75px;
-  background-position: center;
+  background-position: center 59%;
+  
 }
 .services-list .services-item:nth-child(2) .services-title{
   background-image: url("../images/food-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 75px 75px;
-  background-position: center;
+  background-position: center 59%;
 }
 .services-list .services-item:nth-child(3) .services-title{
   background-image: url("../images/gifts-icons.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 75px 75px;
-  background-position: center;
+  background-position: center 59%;
 }
 
   /* Бронирование*/
@@ -351,24 +477,30 @@ body {
   flex-direction: column;
   margin: 0 auto;
   align-items: center;
+
 }  
 .booking-slogan {
+  margin: 0;
     display: block;
     font-size: 30px;
     font-weight: 700;
     line-height: 36px;
     text-transform: uppercase;
     text-align: center;
-    margin-top: 96px;
+    margin-top: 78px;
 }
 .booking-becouse { /* текст не получился ровно((*/
     display: block;
+    margin: 0;
+    padding: 0;
     font-size: 22px;
     line-height: 26px;
     color: #333333;
     text-align: center;
     width: 592px;
     margin-top: 20px;
+    margin-bottom: 0;
+    letter-spacing: 0.1px;
 }
 .booking-link {
   display: block;
@@ -387,7 +519,6 @@ body {
  /* рассылка*/
   .newsletter {
     background-image: url("../images/Subscribe.jpg");
-     /* тут расположение фона не получилось, не заполняет весь блок, какой будет верный бекграунд позишон или другое свойство?*/
     background-size: 100% auto;
     background-position: top center;
     background-repeat: no-repeat;
@@ -407,6 +538,7 @@ body {
     width: 404px;
     font-size: 30px;
     line-height: 36px;
+    margin-bottom: 0;
   }
   .newsletter-legend {
     display: block;
@@ -430,16 +562,21 @@ body {
     font-family: 'PT Sans';
     font-size: 18px;
     line-height: 24px;
-    width: 452px;
+    width: 432px;
     height: 52px;
     padding: 0;
     border: 0;
     border-radius: 4px 0 0 4px;
     background-color: #F2F2F2;
+    padding-left: 20px;
     
   }
   .newsletter-button {
     display: block;
+    font-family: 'PT Sans';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 36px;
     background-color: #82B3D3;
     border: none;
     border-radius: 0 4px 4px 0;
@@ -467,6 +604,7 @@ body {
     display: flex;
     width: 1200px;
     margin: 0 auto;
+    
   }
   .page-footer {
     width: 1200px;
@@ -481,7 +619,7 @@ body {
   }
   .footer-social {
     display: flex;
-    width: 144px;
+    width: 142px;
     margin-left: 70px; 
     
   }
@@ -493,13 +631,18 @@ body {
     flex-direction: row;
     margin: 0;
     padding: 0; 
-    margin-top: 45px;
+    width: 142px;
+    margin-top: 55px;
     margin-bottom: 35px; 
+    justify-content: space-between;
+    align-items: center;
 }
 .footer-social-item a{
   display: block;
-  width: 48px;
+  width: 24px;
   height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .footer-social-item:nth-child(3n) {
   margin-right: 0;
@@ -532,6 +675,10 @@ body {
     width: 115px;
     margin-right: 70px; 
   }
+
+  .htmlacademy-link .htmlacademy-link-icon {
+    fill: #000000;
+  }
   .htmlacademy-link:hover .htmlacademy-link-icon {
     fill: #756157;
   }
@@ -546,7 +693,11 @@ body {
   .footer-social-link {
     display: block;
   }
-  /* не получаются состояния у иконок*/
+  
+  .footer-social-link .footer-social-icon {
+    fill: #83B3D3
+  }
+
   .footer-social-link:hover .footer-social-icon {
     fill: #68A2CA;
   }
@@ -559,10 +710,12 @@ body {
   }
   /* к каталогу*/
   .page-container {
-    margin: 0 auto; /* как поднять основное содержание?*/
+    margin: 0 auto;
+    padding: 0; /* как поднять основное содержание?*/
   }
   .main-container {
     margin: 0 auto;
+    padding: 0;
   }
   .inner-header { 
     background-image: url("../images/filter.jpg");
@@ -691,18 +844,21 @@ body {
   }
   
   .catalog-filter-button-clean:focus {
-    color: ##FFFFFF;
+    color: #FFFFFF;
     border: 3px solid #83B3D3;
     background-color: transparent;
   }
   .catalog-filter-button-clean:active {
-    color:rgba(255, 255, 255, 0.3)
+    color:rgba(255, 255, 255, 0.3);
     background-color: transparent;
   }
 
 .sorting-container{
   display: flex;
+  margin: 0 auto;
   margin-top: 50px;
+  justify-content: space-between;
+  
 }
   .select-results {
     font-size: 30px;
@@ -712,6 +868,7 @@ body {
     display: block;
     margin: 0 auto;
     margin-left: 70px;
+    margin-top: 5px;
   }
   .select-control { 
     font-family: "PT Sans", sans-serif;
@@ -722,10 +879,10 @@ body {
     border-radius: 4px;
     display: block;
     width: 292px;
-    margin-right: 40px;
-    justify-content: space-between;
+    height: 49px;
+    margin-right: 33px;
     padding-left: 20px;
-    padding-right: 44px;
+    
   }
   .view-sorting {
     display: flex;
@@ -733,14 +890,16 @@ body {
     margin-right: 70px;
     flex-wrap: wrap;
     width: 160px;
+    height: 49px;
     justify-content: space-between;
+    
 
   }
   .button-view {
     background-color: transparent;
-    min-width: 16px;
-    min-height: 16px;
-    padding: 16px 16px;
+    width: 16px;
+    height: 14px;
+    padding: 17px 16px;
     border: 2px solid #E5E5E5;
     border-radius: 4px;
   }
@@ -770,7 +929,9 @@ body {
     display: grid;
     grid-template-columns: 340px 340px 340px;
     gap: 20px;
+    
   }
+  
   .product-card { /* у карточки очень очевидные столбики, поэтому я выбрала гриды, а не флексы*/
     color: #333333;
     font-size: 18px;
@@ -805,7 +966,9 @@ body {
     display: block;
     align-self: start;
     margin-top: 16px;
-    margin-bottom: 8px;
+    margin-bottom: -2px;
+    font-size: 24px;
+    line-height: 28px;
   }
   .product-card-rating-image-grup {
     display: block;
@@ -817,8 +980,8 @@ body {
     background-color: #F2F2F2;
     padding: 8px 20px;
     border-radius: 4px;
-
   }
+
   .product-card-type {
     display: block;
     align-self: center;
@@ -876,7 +1039,16 @@ body {
     padding: 0;
     margin-left: 70px;
     width: 400px;
-    margin-top: 40px;
+    margin-top: 75px;
+    position: relative;
+  }
+  
+  .pagination::before {
+    content:'';
+    position: absolute;
+    top: -40px;
+    width: 1060px;
+    border-top: 1px solid #E6E6E6;
   }
   .pagination-link {
     display: block;
@@ -940,4 +1112,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-  } /*принормальном масштабе 100% почемуто марджин между формой и футером странно работает, хотя прописан 104px*/
+    margin: 0 auto;
+    margin-top: 60px;
+  }
+  
+   /*принормальном масштабе 100% почемуто марджин между формой и футером странно работает, хотя прописан 104px*/
