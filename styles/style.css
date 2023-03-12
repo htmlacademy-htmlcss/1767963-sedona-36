@@ -40,7 +40,8 @@ body {
     line-height: 21px;
     background-color:#ffffff; 
     color: #000000;
-    
+    margin: 0;
+    padding: 0;
   }
   .main-container {
     flex-grow: 1;
@@ -113,15 +114,13 @@ body {
     margin: 0 auto;
     flex-wrap: wrap;
     list-style-type: none;
-    width: 268px;
+    width: 270px;
     margin-left: auto;
     margin-right: 70px; 
+    align-items: center;
   }
 
-  .navigation-user .navigation-link {
-    min-width: 20px;
-    min-height: 20px;
-  }
+  
   .navigation-link {
     position: relative;
     display: block;
@@ -147,7 +146,6 @@ body {
   text-align: center;
   padding: 8px 34px;
   border-radius: 4px;
-  
 }
 .navigation-icon {
   position: absolute;
@@ -157,11 +155,21 @@ body {
   left: 0;
   margin: auto;
   fill: #000000;
+  
 }
-.navigation-item {
+.navigation-user-item {
   position: relative;
+  min-width: 10px;
+  padding-left: 11px;
+  padding-right: 11px;
+  
 }
-.navigation-icon-counter {
+.navigation-user .navigation-user-item:last-child {
+  margin-left: auto;
+  padding: 0;
+  
+}
+.navigation-icon-counter { /*почему сердечко не встает на место?*/
   position: absolute;
   display: block;
   width: 12px;
@@ -175,10 +183,9 @@ body {
   line-height: 10px;
   text-align: center;
   z-index: 1;
-  left: 25px;
-  top: 11px;
-
+  left: 14px;
 }
+
 
 
 
@@ -228,9 +235,9 @@ body {
     width: 0;
     height: 0;
     border-bottom: 57px solid #FFFFFF; 
-	  border-right: 300px solid transparent;
+	  border-right: 350px solid transparent;
     top: 1px;
-    left: 300px;
+    left: 250px;
   }
   .hero-divider-right {
     position: relative;
@@ -260,9 +267,9 @@ body {
     width: 0;
     height: 0;
     border-bottom: 57px solid #FFFFFF; 
-	  border-left: 300px solid transparent;
+	  border-left: 350px solid transparent;
     top: 1px;
-    right: 300px;
+    right: 250px;
   }
   /*Приимущества */
   
@@ -375,10 +382,12 @@ body {
 
  
 /* Услуги*/
+
 .services-list {
   display: flex;
   list-style-type: none ;
   padding: 0;
+  margin-top: 18px;
 }
 .services-item{
   display: flex;
@@ -407,7 +416,7 @@ body {
     width: 490px;
     margin: 0 auto;
     padding-top: 20px;
-    padding-bottom: 64px;
+    padding-bottom: 48px;
     font-size: 22px;
     line-height: 26px;
     color: #333333;
@@ -421,7 +430,7 @@ body {
   line-height: 28px;
   text-transform: uppercase;
   text-align: center;
-  padding-top: 133px;
+  padding-top: 180px;
   min-width: 75px;
 }
 .services-description {
@@ -437,21 +446,22 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 75px 75px;
-  background-position: center;
+  background-position: center 59%;
+  
 }
 .services-list .services-item:nth-child(2) .services-title{
   background-image: url("../images/food-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 75px 75px;
-  background-position: center;
+  background-position: center 59%;
 }
 .services-list .services-item:nth-child(3) .services-title{
   background-image: url("../images/gifts-icons.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 75px 75px;
-  background-position: center;
+  background-position: center 59%;
 }
 
   /* Бронирование*/
@@ -460,15 +470,17 @@ body {
   flex-direction: column;
   margin: 0 auto;
   align-items: center;
+
 }  
 .booking-slogan {
+  margin: 0;
     display: block;
     font-size: 30px;
     font-weight: 700;
     line-height: 36px;
     text-transform: uppercase;
     text-align: center;
-    margin-top: 96px;
+    margin-top: 78px;
 }
 .booking-becouse { /* текст не получился ровно((*/
     display: block;
@@ -478,6 +490,7 @@ body {
     text-align: center;
     width: 592px;
     margin-top: 20px;
+    margin-bottom: 0;
 }
 .booking-link {
   display: block;
@@ -516,6 +529,7 @@ body {
     width: 404px;
     font-size: 30px;
     line-height: 36px;
+    margin-bottom: 0;
   }
   .newsletter-legend {
     display: block;
@@ -549,6 +563,10 @@ body {
   }
   .newsletter-button {
     display: block;
+    font-family: 'PT Sans';
+    font-weight: 700;
+font-size: 20px;
+line-height: 36px;
     background-color: #82B3D3;
     border: none;
     border-radius: 0 4px 4px 0;
@@ -576,6 +594,7 @@ body {
     display: flex;
     width: 1200px;
     margin: 0 auto;
+    
   }
   .page-footer {
     width: 1200px;
@@ -590,7 +609,7 @@ body {
   }
   .footer-social {
     display: flex;
-    width: 144px;
+    width: 142px;
     margin-left: 70px; 
     
   }
@@ -602,16 +621,21 @@ body {
     flex-direction: row;
     margin: 0;
     padding: 0; 
-    margin-top: 45px;
+    width: 142px;
+    margin-top: 55px;
     margin-bottom: 35px; 
+    justify-content: space-between;
+    align-items: center;
 }
 .footer-social-item a{
   display: block;
-  width: 48px;
+  min-width: 24px;
   height: 40px;
+  padding-left: 10px;
+  padding-right;: 10px;
 }
 .footer-social-item:nth-child(3n) {
-  margin-right: 0;
+  margin-right: 10px;
 }
 
   .page-footer a {
