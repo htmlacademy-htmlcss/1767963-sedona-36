@@ -164,6 +164,9 @@ body {
   padding-right: 11px;
   
 }
+.navigation-user-item :nth-child(2) {
+  left: -11px;
+}
 .navigation-user .navigation-user-item:last-child {
   margin-left: auto;
   padding: 0;
@@ -184,6 +187,7 @@ body {
   text-align: center;
   z-index: 1;
   left: 14px;
+
 }
 
 
@@ -362,6 +366,7 @@ body {
     width: 1200px;
     background-color: #82B3D3;
     color: #ffffff; 
+    letter-spacing: 0.3px;
     
   } 
   .advantages-description-blue {
@@ -371,6 +376,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 400px;
+    
   }
   .advantages-blue-text .advantages-title {
     margin: 0 auto;
@@ -435,11 +441,12 @@ body {
 }
 .services-description {
   display: block;
-  width: 230px;
+  width: 235px;
   color: #333333;
   text-align: center;
   margin-top: 30px;
   margin-bottom: 81px;
+  letter-spacing: 0.3px;
 }
 .services-list .services-item:nth-child(1) .services-title{
   background-image: url("../images/housing-icon.svg");
@@ -491,6 +498,7 @@ body {
     width: 592px;
     margin-top: 20px;
     margin-bottom: 0;
+    letter-spacing: -2px;
 }
 .booking-link {
   display: block;
