@@ -215,20 +215,28 @@
                     Дата заезда:</label>
                 <input class="field" type="text" id="modal-date-in" name="modal-date-in" placeholder="27 апреля 2020">
               </p>
+              <p class="form-in-label">Мы не можем отправить вас в прошлое.</p>
               <p class="field-group modal-form-date">
-                <label class="form-label" for="modal-date-in">
+                <label class="form-label" for="modal-date-out">
                   Дата выезда:</label>
-              <input class="field" type="text" id="modal-date-in" name="modal-date-in" placeholder="1 сентября 2023">
+              <input class="field" type="text" id="modal-date-out" name="modal-date-in" placeholder="1 сентября 2023">
             </p>
+            <p class="form-out-label">На эти даты есть свободные номера. Пока есть.</p>
             
-            <p class="field-group modal-form-person-adult">
+            <div class="field-group-person-container">
+              <p class="field-group modal-form-person-adult">
               <label class="form-label" for="modal-person-adult">Взрослые:</label>
-              <input class="field" type="number" id="modal-person-adult" name="adult" value="100" min="1" max="100" step="1">
+              <input class="field" type="number" id="modal-person-adult" name="adult" value="99" min="1" max="99" step="1">
+              <span class="modal-minus-button"></span>
+              <span class="modal-plus-button"></span>
             </p>
             <p class="field-group modal-form-person-child">
-              <label class="form-label" for="modal-person-child">Взрослые:</label>
-              <input class="field" type="number" id="modal-person-child" name="child" value="100" min="1" max="100" step="1">
+              <label class="form-label" for="modal-person-child">Дети:</label>
+              <input class="field" type="number" id="modal-person-child" name="child" value="99" min="1" max="99" step="1">
+              <span class="modal-minus-button"></span>
+              <span class="modal-plus-button"></span>
             </p>
+          </div>
             <a class="button modal-form-search-button" href="#">Найти</a>
             </form>
         </section>
