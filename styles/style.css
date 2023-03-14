@@ -562,15 +562,41 @@ body {
     font-family: 'PT Sans';
     font-size: 18px;
     line-height: 24px;
-    width: 432px;
+    width: 412px;
     height: 52px;
     padding: 0;
     border: 0;
     border-radius: 4px 0 0 4px;
     background-color: #F2F2F2;
     padding-left: 20px;
-    
+    padding-right: 20px; 
   }
+  /* Поля состояния */
+.field:hover{
+  background-color: #E6E6E6;
+}
+.field:focus {
+  border-color: #E6E6E6;
+  border: 3px solid #83B3D3;
+}
+.field:active {
+  color: #000000;
+  border: 2px solid #000000;
+  background-color: #F2F2F2;
+}
+
+.field:disabled,
+.field:disabled:hover {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #F2F2F2;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.field::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+
+}
+
   .newsletter-button {
     display: block;
     font-family: 'PT Sans';
@@ -796,18 +822,165 @@ body {
   .catalog-filter-group-infra{
     margin-left: 70px;
   }
-  .catalog-filter-group-price {
-    width: 549px;
-    margin-right: 70px;
-  }
-  
   .catalog-filter-title {
+    display: block;
+    margin: 0;
+    padding: 0;
     font-size: 20px;
     font-weight: 700;
     line-height: 24px;
-    text-transform: uppercase;
     
   }
+  /*Ползунок*/
+  .catalog-filter-title-range {
+    display: block;
+    margin-bottom: 32px;
+    width: 288px;
+  }
+  .catalog-filter-group-range {
+    display: flex;
+    width: 288px;
+    margin-right: 70px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .range-number {
+    display: flex;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 288px;
+    margin-bottom: 43px;
+  }
+  .range-number-min {
+    width: 86px;
+    height: 48px;
+    padding-left: 20px;
+    padding-right: 37px;
+    border-radius: 4px 0px 0px 4px;
+    background: #F2F2F2;
+    border: none;
+    margin-right: 2px;
+    color: #000000;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .range-number-min-word {
+    position: absolute;
+    font-size: 18px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.3);
+    top: -6px;
+    left: 105px; 
+  }
+  .range-number-min::placeholder {
+    color: #000000;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .range-number-min:hover{
+    background-color: #E6E6E6;
+  }
+  .range-number-min:focus {
+    border-color: #E6E6E6;
+    border: 3px solid #83B3D3;
+  }
+  .range-number-min:active {
+    color: #000000;
+    background: #F2F2F2;
+    outline: 2px solid #000000;
+    border-radius: 4px 0px 0px 4px;
+  }
+  
+  .range-number-max {
+    width: 86px;
+    height: 48px;
+    padding-left: 20px;
+    padding-right: 37px;
+    border-radius: 0px 4px 4px 0px;
+    background: #F2F2F2;
+    border: none;
+    color: #000000;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .range-number-max-word {
+    position: absolute;
+    font-size: 18px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.3);
+    top: -6px;
+    right: 20px;
+  }
+  .range-number-max::placeholder {
+    color: #000000;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .range-number-max:hover{
+    background-color: #E6E6E6;
+  }
+  .range-number-max:focus {
+    border-color: #E6E6E6;
+    border: 3px solid #83B3D3;
+  }
+  .range-number-max:active {
+    color: #000000;
+    border: 2px solid #000000;
+    background-color: #F2F2F2;
+  }
+  
+  .range-scale {
+    position: relative;
+    width: 287px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  .range-bar { /*почему он не двигается свойствами лефт или райт??*/
+    position: absolute;
+    height: 4px;
+    background-color: #FFFFFF;
+    
+  }
+  .range-toggle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+  }
+  .toggle-min {
+    top: -8px;
+    left: -10px;
+  }
+  
+  .toggle-max {
+    top: -8px;
+    right: -10px;
+  }
+  
+  .range-toggle:hover {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  }
+  
+  .range-toggle:focus {
+    outline: 3px solid #83B3D3;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  }
+  .range-toggle:active{
+    outline: 2px solid #83B3D3;
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.4);
+  }
+  
 
   .catalog-filter-list {
     list-style-type: none ;
