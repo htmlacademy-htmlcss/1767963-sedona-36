@@ -728,6 +728,7 @@ body {
   .footer-social-link:active .footer-social-icon {
     fill: rgba(104, 162, 202, 0.3);
   }
+
   /*модальное окно*/
   .modal-container {
     
@@ -760,8 +761,8 @@ body {
   .modal-close-button {
     position: absolute;
     padding: 0;
-    top: 0;
-    right: 0;
+    top: 70px;
+    right: 46px;
     width: 52px;
     height: 52px;
     background-color: #F2F2F2;
@@ -772,6 +773,18 @@ body {
     background-position: center;
     cursor: pointer;
   }
+  .modal-close-button:hover {
+    background-color: #E6E6E6;
+  }
+  .modal-close-button:focus {
+    background-color: #E6E6E6;
+    border: 3px solid #83B3D3;
+  }
+  .modal-close-button:active {
+    background-color: #E6E6E6;
+    color: rgba(0, 0, 0, 0,3);
+  }
+
   .modal-title {
     margin: 0;
     margin-bottom: 64px;
@@ -792,6 +805,17 @@ body {
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
+  }
+  .modal-form-search-button:hover {
+    background-color: #68A2CA;
+  }
+  
+  .modal-form-search-button:focus {
+    background-color: #68A2CA;
+  }
+  .modal-form-search-button:active {
+    background-color: #82B3D3;
+    color: rgba(255, 255, 255, 0.3);
   }
   .field-group {
     position: relative;
@@ -830,6 +854,18 @@ body {
     background-position: right 17px center;
     appearance: none;
   }
+  .field:hover {
+    background-color: #E6E6E6;
+  }
+  .field:focus {
+    background-color: #E6E6E6;
+    border: 3px solid #83B3D3;
+  }
+  .field:active {
+    background-color: #E6E6E6;
+    color: rgba(0, 0, 0, 0,3);
+    border: 2px solid #000000;
+  }
   .form-in-label {
     display: block;
     font-size: 16px;
@@ -852,7 +888,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 23px;
+    margin-bottom: 48px;
   }
   .modal-form-person-adult {
     display: flex;
@@ -1030,7 +1066,7 @@ body {
     padding: 0;
     margin: 0;
     display: block;
-    left: 50px;
+    left: 52px;
     width: 26px;
     height: 26px;
   }
@@ -1051,16 +1087,20 @@ body {
     line-height: 20px;
     font-weight: normal;
     text-transform: none;
-    padding: 22px 15px 18px 18px;
+    padding-left: 23px ;
+    padding-top: 20px;
+    padding-right: 14px;
+    padding-bottom: 22px;
     border-radius: 10px;
     display: block;
     width: 216px;
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
     position: absolute;
     top: 100%;
-    left: 50%;
+    left: 20%;
     transform: translateX(-25%);
     z-index: 1;
+    margin-top: 12px;
     display: none;
   }
   .tooltip-toggle:hover + .tooltip-text,
@@ -1070,8 +1110,8 @@ body {
   .tooltip-text:after {
     content:'';
     background-image: url("../images/tooltip-arrow.svg");
-    width: 14px;
-    height: 6px;
+    width: 19px;
+    height: 9px;
     position:absolute;
     bottom: 100%;
     left:0;
