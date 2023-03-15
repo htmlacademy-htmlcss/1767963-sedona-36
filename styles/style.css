@@ -571,11 +571,6 @@ body {
 }
 
 /* футер*/
-.page-footer-container {
-  display: flex;
-  width: 1200px;
-  margin: 0 auto;
-}
 .page-footer {
   width: 1200px;
   display: flex;
@@ -586,11 +581,6 @@ body {
 .footer-link {
   display: block;
 }
-.footer-social {
-  display: flex;
-  width: 142px;
-  margin-left: 70px;
-}
 
 .footer-social-list {
   display: flex;
@@ -599,6 +589,7 @@ body {
   flex-direction: row;
   margin: 0;
   padding: 0;
+  margin-left: 70px;
   width: 142px;
   margin-top: 55px;
   margin-bottom: 35px;
@@ -621,11 +612,9 @@ body {
   text-decoration: none;
 }
 
-.footer-contacts-phone {
+.footer-contacts-phone-link {
   font-size: 40px;
   line-height: 40px;
-  display: block;
-  
 }
 .footer-contacts-phone-link:hover {
   color: #756157;
@@ -640,8 +629,8 @@ body {
   color: rgba(117, 97, 87, 0.3);
 }
 
-.footer-contacts-web {
-  display: block;
+.htmlacademy-link {
+  
   width: 115px;
   margin-right: 70px;
 }
