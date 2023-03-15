@@ -194,23 +194,29 @@ body {
   margin-top: -12px;
 }
 /*Хиро блок*/
-.hero-background {
-  display: block;
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1200px;
   margin: 0 auto;
+  background-image: url("../images/index-background.jpg");
+  background-color: #615048;
+  background-size: 100% 100%;
 }
 .hero-welcome {
   display: block;
   margin: 0 auto;
-  margin-top: -434px;
+  margin-top: 52px;
   margin-bottom: 82px;
 }
-.hero-divider-left {
-  position: relative;
+.hero::after {
+  position: absolute;
   display: block;
   width: 1200px;
   height: 57px;
-  margin-right: auto;
-  margin-top: -57px;
+  bottom: 0;
   z-index: 1;
   content: "";
   background-color: transparent;
@@ -1088,7 +1094,7 @@ input[type=number] {
 }
 .inner-header {
   background-image: url("../images/filter.jpg");
-  background-size: 100% auto;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   color: #ffffff;
   display: flex;
