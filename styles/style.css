@@ -88,6 +88,7 @@ body {
   margin: 0 auto;
   flex-direction: row;
   align-items: center;
+  align-items: start;
 }
 .navigation-logo {
   display: block;
@@ -106,7 +107,7 @@ body {
   flex-wrap: wrap;
   list-style-type: none;
   margin-left: 28px;
-  
+  max-width: 620px;
   align-self: baseline;
   z-index: 1;
 }
@@ -115,10 +116,12 @@ body {
   margin: 0 auto;
   flex-wrap: wrap;
   list-style-type: none;
-  
   margin-left: auto;
   margin-right: 70px;
   align-items: center;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  max-width: 540px;
 }
 
 .navigation-link {
@@ -186,28 +189,32 @@ body {
   left: 13px;
 }
 
-.page-container {
-  margin: 0 auto;
-  margin-top: -12px;
-}
+
 /*Хиро блок*/
-.hero-background {
-  display: block;
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1200px;
   margin: 0 auto;
+  margin-top: -5px;
+  background-image: url("../images/index-background.jpg");
+  background-color: #615048;
+  background-size: 100% 100%;
 }
 .hero-welcome {
   display: block;
   margin: 0 auto;
-  margin-top: -434px;
+  margin-top: 52px;
   margin-bottom: 82px;
 }
-.hero-divider-left {
-  position: relative;
+.hero::after {
+  position: absolute;
   display: block;
   width: 1200px;
   height: 57px;
-  margin-right: auto;
-  margin-top: -57px;
+  bottom: 0;
   z-index: 1;
   content: "";
   background-color: transparent;
@@ -287,6 +294,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   width: 230px;
+  margin-bottom: 14px;
 }
 .advantages-item + .advantages-item-text{
   padding-top: 112px;
@@ -329,9 +337,10 @@ body {
 
 .services-list {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
   padding: 0;
-  margin-top: 18px;
+  margin-top: 18px; 
 }
 .services-item {
   display: flex;
@@ -458,13 +467,15 @@ body {
   background-size: 100% auto;
   background-position: top center;
   background-repeat: no-repeat;
-  height: 415px;
   width: 1200px;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #ffffff;
   margin: 0 auto;
+}
+.main-index .newsletter {
+  background-color: #615048;
 }
 .newsletter-title {
   display: block;
@@ -560,11 +571,6 @@ body {
 }
 
 /* футер*/
-.page-footer-container {
-  display: flex;
-  width: 1200px;
-  margin: 0 auto;
-}
 .page-footer {
   width: 1200px;
   display: flex;
@@ -575,11 +581,6 @@ body {
 .footer-link {
   display: block;
 }
-.footer-social {
-  display: flex;
-  width: 142px;
-  margin-left: 70px;
-}
 
 .footer-social-list {
   display: flex;
@@ -588,6 +589,7 @@ body {
   flex-direction: row;
   margin: 0;
   padding: 0;
+  margin-left: 70px;
   width: 142px;
   margin-top: 55px;
   margin-bottom: 35px;
@@ -610,11 +612,9 @@ body {
   text-decoration: none;
 }
 
-.footer-contacts-phone {
+.footer-contacts-phone-link {
   font-size: 40px;
   line-height: 40px;
-  display: block;
-  
 }
 .footer-contacts-phone-link:hover {
   color: #756157;
@@ -629,8 +629,8 @@ body {
   color: rgba(117, 97, 87, 0.3);
 }
 
-.footer-contacts-web {
-  display: block;
+.htmlacademy-link {
+  
   width: 115px;
   margin-right: 70px;
 }
@@ -1072,10 +1072,6 @@ input[type=number] {
 }
 
 /* к каталогу*/
-.page-container {
-  margin: 0 auto;
-  padding: 0;
-}
 .main-container {
   margin: 0 auto;
   padding: 0;
@@ -1083,12 +1079,13 @@ input[type=number] {
 }
 .inner-header {
   background-image: url("../images/filter.jpg");
-  background-size: 100% auto;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   color: #ffffff;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  background-color: #615048;
 }
 .inner-header-title {
   font-size: 60px;
@@ -1141,10 +1138,6 @@ input[type=number] {
   width: 7px;
 }
 /* фильтры*/
-.catalog-products {
-  color: #ffffff;
-  display: flex;
-}
 .catalog-filter {
   display: flex;
   width: 1060px;
@@ -1452,7 +1445,7 @@ input[type=number] {
 .sorting-container {
   display: flex;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 40px;
   justify-content: space-between;
 }
 .select-results {
@@ -1463,7 +1456,7 @@ input[type=number] {
   display: block;
   margin: 0 auto;
   margin-left: 70px;
-  margin-top: 5px;
+  margin-top: 10px;
   color: #000000;
 }
 .select-control {
