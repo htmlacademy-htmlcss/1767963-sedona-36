@@ -189,10 +189,7 @@ body {
   left: 13px;
 }
 
-.page-container {
-  margin: 0 auto;
-  margin-top: -12px;
-}
+
 /*Хиро блок*/
 .hero {
   position: relative;
@@ -201,6 +198,7 @@ body {
   align-items: center;
   width: 1200px;
   margin: 0 auto;
+  margin-top: -5px;
   background-image: url("../images/index-background.jpg");
   background-color: #615048;
   background-size: 100% 100%;
@@ -469,13 +467,15 @@ body {
   background-size: 100% auto;
   background-position: top center;
   background-repeat: no-repeat;
-  height: 415px;
   width: 1200px;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #ffffff;
   margin: 0 auto;
+}
+.main-index .newsletter {
+  background-color: #615048;
 }
 .newsletter-title {
   display: block;
@@ -1083,10 +1083,6 @@ input[type=number] {
 }
 
 /* к каталогу*/
-.page-container {
-  margin: 0 auto;
-  padding: 0;
-}
 .main-container {
   margin: 0 auto;
   padding: 0;
@@ -1152,10 +1148,6 @@ input[type=number] {
   width: 7px;
 }
 /* фильтры*/
-.catalog-products {
-  color: #ffffff;
-  display: flex;
-}
 .catalog-filter {
   display: flex;
   width: 1060px;
@@ -1463,7 +1455,7 @@ input[type=number] {
 .sorting-container {
   display: flex;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 40px;
   justify-content: space-between;
 }
 .select-results {
@@ -1474,7 +1466,7 @@ input[type=number] {
   display: block;
   margin: 0 auto;
   margin-left: 70px;
-  margin-top: 5px;
+  margin-top: 10px;
   color: #000000;
 }
 .select-control {
