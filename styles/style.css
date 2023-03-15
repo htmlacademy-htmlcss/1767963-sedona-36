@@ -1464,6 +1464,7 @@ input[type=number] {
   margin: 0 auto;
   margin-left: 70px;
   margin-top: 5px;
+  color: #000000;
 }
 .select-control {
   font-family: "PT Sans", sans-serif;
@@ -1713,4 +1714,8 @@ input[type=number] {
   align-items: center;
   margin: 0 auto;
   margin-top: 60px;
+  color:#000000;
+}
+.newsletter-inner .newsletter-legend{
+color:#333333;
 }
