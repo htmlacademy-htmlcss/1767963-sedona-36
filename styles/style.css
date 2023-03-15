@@ -394,21 +394,21 @@ body {
   margin-bottom: 81px;
   letter-spacing: 0.3px;
 }
-.services-list .services-item:nth-child(1) .services-title {
+.services-item:nth-child(1) .services-title {
   background-image: url("../images/housing-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 75px 75px;
   background-position: center 59%;
 }
-.services-list .services-item:nth-child(2) .services-title {
+.services-item:nth-child(2) .services-title {
   background-image: url("../images/food-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 75px 75px;
   background-position: center 59%;
 }
-.services-list .services-item:nth-child(3) .services-title {
+.services-item:nth-child(3) .services-title {
   background-image: url("../images/gifts-icons.svg");
   background-repeat: no-repeat;
   background-position: center;
