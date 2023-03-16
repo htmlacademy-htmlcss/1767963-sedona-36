@@ -698,6 +698,7 @@ body {
 .modal-content {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 .modal-close-button {
   position: absolute;
@@ -735,6 +736,7 @@ body {
   line-height: 36px;
   color: #000000;
   text-transform: uppercase;
+  max-width: 540px;
 }
 .modal-form-search-button {
   background-color: #82b3d3;
