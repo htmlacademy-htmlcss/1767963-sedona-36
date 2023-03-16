@@ -692,7 +692,7 @@ body {
 }
 .modal-booking {
   width: 577px;
-  padding: 70px 64px;
+  padding: 64px 70px;
   border-radius: 30px;
 }
 .modal-content {
@@ -703,8 +703,8 @@ body {
 .modal-close-button {
   position: absolute;
   padding: 0;
-  top: 70px;
-  right: 46px;
+  top: 64px;
+  right: 52px;
   width: 52px;
   height: 52px;
   background-color: #f2f2f2;
@@ -724,7 +724,9 @@ body {
 }
 .modal-close-button:active {
   background-color: #e6e6e6;
-  color: rgba(0, 0, 0, 0, 3);
+  opacity: .3;
+  border: none;
+  outline: none;
 }
 
 .modal-title {
