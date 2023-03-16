@@ -134,12 +134,24 @@ body {
 }
 .navigation-link-current::before {
   position: absolute;
-  right: 20px;
+  right: 15px;
   bottom: 0;
-  left: 20px;
+  left: 15px;
   height: 2px;
   background-color: #756157;
   content: "";
+}
+.navigation-link:hover {
+  opacity: .6;
+}
+
+.navigation-link:focus {
+  outline: 3px solid #83B3D3;
+  border: 0;
+  border-radius: 4px;
+}
+.button:active {
+  opacity: .3;
 }
 .navigation-button {
   color: #ffffff;
@@ -206,7 +218,7 @@ body {
 .hero-welcome {
   display: block;
   margin: 0 auto;
-  margin-top: 52px;
+  margin-top: 57px;
   margin-bottom: 82px;
 }
 .hero::after {
@@ -298,7 +310,7 @@ body {
 }
 .advantages-item + .advantages-item-text{
   padding-top: 112px;
-  padding-bottom: 112px;
+  padding-bottom: 100px;
 
 }
 .advantages-item-text {
@@ -692,18 +704,19 @@ body {
 }
 .modal-booking {
   width: 577px;
-  padding: 70px 64px;
+  padding: 64px 70px;
   border-radius: 30px;
 }
 .modal-content {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 .modal-close-button {
   position: absolute;
   padding: 0;
-  top: 70px;
-  right: 46px;
+  top: 64px;
+  right: 52px;
   width: 52px;
   height: 52px;
   background-color: #f2f2f2;
@@ -723,7 +736,9 @@ body {
 }
 .modal-close-button:active {
   background-color: #e6e6e6;
-  color: rgba(0, 0, 0, 0, 3);
+  opacity: .3;
+  border: none;
+  outline: none;
 }
 
 .modal-title {
@@ -735,17 +750,19 @@ body {
   line-height: 36px;
   color: #000000;
   text-transform: uppercase;
+  max-width: 540px;
 }
 .modal-form-search-button {
   background-color: #82b3d3;
   border: none;
   border-radius: 10px;
   display: block;
-  width: 539px;
+  width: 100%;
   padding: 18px;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+  cursor: pointer;
 }
 .modal-form-search-button:hover {
   background-color: #68a2ca;
@@ -879,6 +896,9 @@ input[type=number] {
   padding-left: 40px;
   padding-right: 40px;
 }
+.modal-form-person-child .form-label {
+  margin-left: 5px;
+}
 .modal-form-person-child .modal-minus-button {
   position: absolute;
   bottom: 12px;
@@ -891,6 +911,9 @@ input[type=number] {
   padding: 0;
   margin: 0;
   opacity: 0.3;
+  border: none;
+  cursor: pointer;
+  z-index: 3;
 }
 .modal-form-person-child .modal-plus-button {
   position: absolute;
@@ -904,6 +927,8 @@ input[type=number] {
   padding: 0;
   margin: 0;
   opacity: 0.3;
+  border: none;
+  cursor: pointer;
 }
 .modal-form-person-child .modal-minus-button::before {
   position: absolute;
@@ -933,6 +958,27 @@ input[type=number] {
   content: "";
   transform: rotate(90deg);
 }
+.modal-form-person-child .modal-minus-button:hover {
+  opacity: 1;
+}
+.modal-form-person-child .modal-minus-button:focus {
+  opacity: 1;
+  outline: 3px solid #83b3d3;
+}
+.modal-form-person-child .modal-minus-button:active {
+  opacity: 0.3;
+}
+
+.modal-form-person-child .modal-plus-button:hover {
+  opacity: 1;
+}
+.modal-form-person-child .modal-plus-button:focus {
+  opacity: 1;
+  outline: 3px solid #83b3d3;
+}
+.modal-form-person-child .modal-plus-button:active {
+  opacity: 0.3;
+}
 .modal-form-person-adult .field {
   position: relative;
   width: 30px;
@@ -959,6 +1005,9 @@ input[type=number] {
   padding: 0;
   margin: 0;
   opacity: 0.3;
+  border: none;
+  cursor: pointer;
+  z-index: 3;
 }
 .modal-form-person-adult .modal-plus-button {
   position: absolute;
@@ -972,6 +1021,8 @@ input[type=number] {
   padding: 0;
   margin: 0;
   opacity: 0.3;
+  border: none;
+  cursor: pointer;
 }
 .modal-form-person-adult .modal-minus-button::before {
   position: absolute;
@@ -1001,6 +1052,27 @@ input[type=number] {
   content: "";
   transform: rotate(90deg);
 }
+.modal-form-person-adult .modal-minus-button:hover {
+  opacity: 1;
+}
+.modal-form-person-adult .modal-minus-button:focus {
+  opacity: 1;
+  outline: 3px solid #83b3d3;
+}
+.modal-form-person-adult .modal-minus-button:active {
+  opacity: 0.3;
+}
+
+.modal-form-person-adult .modal-plus-button:hover {
+  opacity: 1;
+}
+.modal-form-person-adult .modal-plus-button:focus {
+  opacity: 1;
+  outline: 3px solid #83b3d3;
+}
+.modal-form-person-adult .modal-plus-button:active {
+  opacity: 0.3;
+}
 
 .tooltip {
   position: absolute;
@@ -1015,7 +1087,7 @@ input[type=number] {
   padding: 0;
   margin: 0;
   display: block;
-  left: 52px;
+  left: 54px;
   width: 26px;
   height: 26px;
 }
@@ -1037,16 +1109,16 @@ input[type=number] {
   font-weight: normal;
   text-transform: none;
   padding-left: 23px;
-  padding-top: 20px;
-  padding-right: 14px;
-  padding-bottom: 22px;
+  padding-top: 22px;
+  padding-right: 16px;
+  padding-bottom: 23px;
   border-radius: 10px;
   display: block;
   width: 216px;
   box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
   position: absolute;
   top: 100%;
-  left: 20%;
+  left: 16%;
   transform: translateX(-25%);
   z-index: 1;
   margin-top: 12px;
@@ -1075,7 +1147,10 @@ input[type=number] {
 .main-container {
   margin: 0 auto;
   padding: 0;
-  width: 1200px;
+  width: 1200px; 
+}
+.inner-catalog {
+  margin-top: -5px;
 }
 .inner-header {
   background-image: url("../images/filter.jpg");
@@ -1086,6 +1161,7 @@ input[type=number] {
   flex-direction: column;
   flex-wrap: wrap;
   background-color: #615048;
+  
 }
 .inner-header-title {
   font-size: 60px;
@@ -1093,7 +1169,7 @@ input[type=number] {
   line-height: 78px;
   display: block;
   margin: 0 auto;
-  margin-top: 35px;
+  margin-top: 38px;
   margin-left: 70px;
 }
 
@@ -1114,6 +1190,8 @@ input[type=number] {
   display: block;
   min-width: 12px;
   min-height: 21px;
+  font-size: 16px;
+  line-height: 21px;
 }
 
 .breadcrumbs-link:not(:last-child) {
@@ -1150,6 +1228,7 @@ input[type=number] {
 }
 .catalog-filter-group {
   padding: 0;
+  margin: 0;
   border: none;
 }
 
@@ -1168,9 +1247,16 @@ input[type=number] {
   background-color: #ffffff;
   border-radius: 4px;
 }
-.control:hover .control-mark {
-  background-color: #ffffff;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+.control:hover {
+  opacity: 0.6;
+}
+
+.control:active {
+  opacity: .3;
+}
+
+.control-input:focus + .control-mark {
+  outline: 3px solid #83B3D3;
 }
 
 .control-input:disabled + .control-mark {
@@ -1405,6 +1491,10 @@ input[type=number] {
   width: 191px;
   height: 36px;
   border-radius: 4px;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
 }
 .catalog-filter-button:not(:last-child) {
   margin-bottom: 32px;
@@ -1445,7 +1535,7 @@ input[type=number] {
 .sorting-container {
   display: flex;
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 48px;
   justify-content: space-between;
 }
 .select-results {
@@ -1456,7 +1546,7 @@ input[type=number] {
   display: block;
   margin: 0 auto;
   margin-left: 70px;
-  margin-top: 10px;
+  margin-top: 5px;
   color: #000000;
 }
 .select-control {
@@ -1464,7 +1554,8 @@ input[type=number] {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
-  border: 2px solid #e5e5e5;
+  outline: 2px solid #e5e5e5;
+  border: none;
   border-radius: 4px;
   display: block;
   width: 292px;
@@ -1474,8 +1565,23 @@ input[type=number] {
   background-image: url("../images/arow-down-icon.svg");
   background-repeat: no-repeat;
   background-position: right 16px center;
+  background-color: #FFFFFF;
   appearance: none;
 }
+.select-control:hover {
+  outline: 2px solid #68A2CA;
+}
+.select-control:focus {
+  outline: 2px solid #68A2CA;
+}
+.select-control:active {
+outline: 2px solid #3F5E72;
+}
+.select-control:disabled {
+  opacity: 0.3;
+}
+  
+  
 .view-sorting {
   display: flex;
   margin-left: 40px;
@@ -1490,8 +1596,11 @@ input[type=number] {
   width: 16px;
   height: 14px;
   padding: 17px 16px;
-  border: 2px solid #e5e5e5;
+  outline: 2px solid #e5e5e5;
   border-radius: 4px;
+}
+.button-view:first-child {
+  outline: 2px solid #000000;
 }
 .button-view:hover {
   outline: 2px solid #000000;
@@ -1540,7 +1649,21 @@ input[type=number] {
   grid-column: 1 / -1;
   display: flex;
   flex-direction: column;
+  transition: 0.5s;
 }
+.product-card-link:hover {
+ transform: scale(1.05);
+ transition: 0.5s;
+}
+.product-card-link:focus {
+  transform: scale(1.05);
+  transition: 0.5s;
+  outline: 3px solid #83B3D3;
+}
+.product-card-link:active {
+  opacity: .6;
+}
+
 .product-card-rating {
   font-size: 16px;
   line-height: 20px;
@@ -1630,7 +1753,7 @@ input[type=number] {
   padding: 0;
   margin-left: 70px;
   width: 400px;
-  margin-top: 75px;
+  margin-top: 70px;
   position: relative;
 }
 
