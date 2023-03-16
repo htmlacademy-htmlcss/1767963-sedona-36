@@ -1577,6 +1577,9 @@ input[type=number] {
   outline: 2px solid #e5e5e5;
   border-radius: 4px;
 }
+.button-view:first-child {
+  outline: 2px solid #000000;
+}
 .button-view:hover {
   outline: 2px solid #000000;
   background-color: transparent;
