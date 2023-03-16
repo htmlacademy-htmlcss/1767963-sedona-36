@@ -1409,6 +1409,10 @@ input[type=number] {
   width: 191px;
   height: 36px;
   border-radius: 4px;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
 }
 .catalog-filter-button:not(:last-child) {
   margin-bottom: 32px;
