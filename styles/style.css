@@ -141,6 +141,18 @@ body {
   background-color: #756157;
   content: "";
 }
+.navigation-link:hover {
+  opacity: .6;
+}
+
+.navigation-link:focus {
+  outline: 3px solid #83B3D3;
+  border: 0;
+  border-radius: 4px;
+}
+.button:active {
+  opacity: .3;
+}
 .navigation-button {
   color: #ffffff;
   width: 92px;
