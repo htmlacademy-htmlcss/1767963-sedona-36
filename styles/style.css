@@ -1574,7 +1574,7 @@ input[type=number] {
   width: 16px;
   height: 14px;
   padding: 17px 16px;
-  border: 2px solid #e5e5e5;
+  outline: 2px solid #e5e5e5;
   border-radius: 4px;
 }
 .button-view:hover {
