@@ -1148,6 +1148,7 @@ input[type=number] {
   margin: 0 auto;
   padding: 0;
   width: 1200px;
+  margin-top: -5px;
 }
 .inner-header {
   background-image: url("../images/filter.jpg");
@@ -1166,7 +1167,7 @@ input[type=number] {
   line-height: 78px;
   display: block;
   margin: 0 auto;
-  margin-top: 35px;
+  margin-top: 38px;
   margin-left: 70px;
 }
 
@@ -1529,7 +1530,7 @@ input[type=number] {
 .sorting-container {
   display: flex;
   margin: 0 auto;
-  margin-top: 45px;
+  margin-top: 48px;
   justify-content: space-between;
 }
 .select-results {
@@ -1540,7 +1541,7 @@ input[type=number] {
   display: block;
   margin: 0 auto;
   margin-left: 70px;
-  margin-top: 10px;
+  margin-top: 5px;
   color: #000000;
 }
 .select-control {
@@ -1732,7 +1733,7 @@ input[type=number] {
   padding: 0;
   margin-left: 70px;
   width: 400px;
-  margin-top: 75px;
+  margin-top: 70px;
   position: relative;
 }
 
