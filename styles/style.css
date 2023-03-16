@@ -1147,7 +1147,9 @@ input[type=number] {
 .main-container {
   margin: 0 auto;
   padding: 0;
-  width: 1200px;
+  width: 1200px; 
+}
+.inner-catalog {
   margin-top: -5px;
 }
 .inner-header {
