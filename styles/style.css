@@ -1476,6 +1476,7 @@ input[type=number] {
   background-image: url("../images/arow-down-icon.svg");
   background-repeat: no-repeat;
   background-position: right 16px center;
+  background-color: #E5E5E5;
   appearance: none;
 }
 .view-sorting {
