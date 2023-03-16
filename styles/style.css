@@ -1250,11 +1250,13 @@ input[type=number] {
 .control:hover {
   opacity: 0.6;
 }
-.control-mark:focus {
-  outline: 3px solid #83B3D3;
-}
+
 .control:active {
   opacity: .3;
+}
+
+.control-input:focus + .control-mark {
+  outline: 3px solid #83B3D3;
 }
 
 .control-input:disabled + .control-mark {
