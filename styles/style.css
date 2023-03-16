@@ -218,7 +218,7 @@ body {
 .hero-welcome {
   display: block;
   margin: 0 auto;
-  margin-top: 52px;
+  margin-top: 57px;
   margin-bottom: 82px;
 }
 .hero::after {
@@ -310,7 +310,7 @@ body {
 }
 .advantages-item + .advantages-item-text{
   padding-top: 112px;
-  padding-bottom: 112px;
+  padding-bottom: 100px;
 
 }
 .advantages-item-text {
@@ -1226,6 +1226,7 @@ input[type=number] {
 }
 .catalog-filter-group {
   padding: 0;
+  margin: 0;
   border: none;
 }
 
