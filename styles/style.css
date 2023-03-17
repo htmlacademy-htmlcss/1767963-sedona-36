@@ -218,7 +218,7 @@ body {
 .hero-welcome {
   display: block;
   margin: 0 auto;
-  margin-top: 57px;
+  margin-top: 52px;
   margin-bottom: 82px;
 }
 .hero::after {
@@ -787,11 +787,15 @@ body {
   margin-bottom: 4px;
 }
 .form-label {
+  display: flex;
+  flex-wrap: wrap;
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+  max-width: 120px;
 }
+
 .field-group .field {
   display: block;
   font-family: "PT Sans", sans-serif;
@@ -883,7 +887,6 @@ input[type=number] {
 }
 
 .modal-form-person-child .field {
-  position: relative;
   width: 30px;
   height: 48px;
   text-align: center;
@@ -898,6 +901,13 @@ input[type=number] {
 }
 .modal-form-person-child .form-label {
   margin-left: 5px;
+  max-width: 95px;
+}
+.modal-form-person-adult .form-label {
+  max-width: 95px;
+}
+.modal-button-container {
+  position: relative;
 }
 .modal-form-person-child .modal-minus-button {
   position: absolute;
@@ -930,6 +940,7 @@ input[type=number] {
   border: none;
   cursor: pointer;
 }
+
 .modal-form-person-child .modal-minus-button::before {
   position: absolute;
   top: 8px;
@@ -980,7 +991,6 @@ input[type=number] {
   opacity: 0.3;
 }
 .modal-form-person-adult .field {
-  position: relative;
   width: 30px;
   height: 48px;
   text-align: center;
@@ -1075,19 +1085,18 @@ input[type=number] {
 }
 
 .tooltip {
-  position: absolute;
+  display: inline-block;
   margin-left: 10px;
   width: 26px;
   height: 26px;
 }
 .tooltip-toggle {
-  position: absolute;
   border: none;
   background-color: transparent;
   padding: 0;
   margin: 0;
   display: block;
-  left: 54px;
+  margin-left: -24px;
   width: 26px;
   height: 26px;
 }
@@ -1118,10 +1127,10 @@ input[type=number] {
   box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
   position: absolute;
   top: 100%;
-  left: 16%;
+  left: 13px;
   transform: translateX(-25%);
   z-index: 1;
-  margin-top: 12px;
+  margin-top: 3px;
   display: none;
 }
 .tooltip-toggle:hover + .tooltip-text,
@@ -1442,6 +1451,8 @@ input[type=number] {
   position: absolute;
   height: 4px;
   background-color: #ffffff;
+  left: 0;
+  width: 217px;
 }
 .range-toggle {
   position: absolute;
@@ -1626,7 +1637,7 @@ outline: 2px solid #3F5E72;
   margin-bottom: 40px;
   display: grid;
   grid-template-columns: 340px 340px 340px;
-  gap: 20px;
+  gap: 16px 20px;
 }
 
 .product-card {
@@ -1729,7 +1740,7 @@ outline: 2px solid #3F5E72;
 
 .button-favorites-green {
   background-color: #7db54f;
-  padding: 8px 18px;
+  padding: 8px 20px;
   border-radius: 4px;
 }
 .button-favorites-green:hover {
@@ -1753,7 +1764,7 @@ outline: 2px solid #3F5E72;
   padding: 0;
   margin-left: 70px;
   width: 400px;
-  margin-top: 70px;
+  margin-top: 75px;
   position: relative;
 }
 
