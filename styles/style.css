@@ -1629,7 +1629,7 @@ outline: 2px solid #3F5E72;
   margin-bottom: 40px;
   display: grid;
   grid-template-columns: 340px 340px 340px;
-  gap: 20px;
+  gap: 16px 20px;
 }
 
 .product-card {
@@ -1732,7 +1732,7 @@ outline: 2px solid #3F5E72;
 
 .button-favorites-green {
   background-color: #7db54f;
-  padding: 8px 18px;
+  padding: 8px 20px;
   border-radius: 4px;
 }
 .button-favorites-green:hover {
@@ -1756,7 +1756,7 @@ outline: 2px solid #3F5E72;
   padding: 0;
   margin-left: 70px;
   width: 400px;
-  margin-top: 70px;
+  margin-top: 75px;
   position: relative;
 }
 
