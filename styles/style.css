@@ -218,7 +218,7 @@ body {
 .hero-welcome {
   display: block;
   margin: 0 auto;
-  margin-top: 57px;
+  margin-top: 52px;
   margin-bottom: 82px;
 }
 .hero::after {
@@ -887,7 +887,6 @@ input[type=number] {
 }
 
 .modal-form-person-child .field {
-  position: relative;
   width: 30px;
   height: 48px;
   text-align: center;
@@ -902,6 +901,13 @@ input[type=number] {
 }
 .modal-form-person-child .form-label {
   margin-left: 5px;
+  max-width: 95px;
+}
+.modal-form-person-adult .form-label {
+  max-width: 95px;
+}
+.modal-button-container {
+  position: relative;
 }
 .modal-form-person-child .modal-minus-button {
   position: absolute;
@@ -934,6 +940,7 @@ input[type=number] {
   border: none;
   cursor: pointer;
 }
+
 .modal-form-person-child .modal-minus-button::before {
   position: absolute;
   top: 8px;
@@ -984,7 +991,6 @@ input[type=number] {
   opacity: 0.3;
 }
 .modal-form-person-adult .field {
-  position: relative;
   width: 30px;
   height: 48px;
   text-align: center;
@@ -1445,6 +1451,8 @@ input[type=number] {
   position: absolute;
   height: 4px;
   background-color: #ffffff;
+  left: 0;
+  width: 217px;
 }
 .range-toggle {
   position: absolute;
